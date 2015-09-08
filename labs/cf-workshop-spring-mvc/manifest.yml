@@ -1,0 +1,8 @@
+applications:
+- name: workshop
+  memory: 512M
+  instances: 1
+  host: workshop-${random-word}
+  path: ./target/cf-workshop-spring-mvc-0.1.war
+  env:
+      JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
