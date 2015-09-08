@@ -36,7 +36,7 @@ $ cf marketplace
 and you'll get a list of services, their available plans, and descriptions. On Pivotal Cloudfoundry, the ``free'' tier of plans is normally the first one listed.
 
 The second way is specific to Pivotal Cloudfoundry's Apps Manager UI.
-If you haven't already, login to it by visiting http://console.pcf.clouddemo.verizon.com
+If you haven't already, login to it by visiting http://console.pcfsony.com
 
 Click on the ''Marketplace'' link:
 

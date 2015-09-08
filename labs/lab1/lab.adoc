@@ -7,7 +7,7 @@
 . Set the API target for the CLI:
 +
 ----
-$ cf api https://api.pcf.clouddemo.verizon.com --skip-ssl-validation
+$ cf api https://api.pcfsony.com --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
