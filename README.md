@@ -1,5 +1,4 @@
-# PCF-Workshop-Sony
-= Pivotal Cloud Foundry Bootcamp
+# Pivotal Cloud Foundry Bootcamp
 
 == Schedule
 
