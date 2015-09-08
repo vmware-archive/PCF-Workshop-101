@@ -21,7 +21,7 @@ Building, Packaging, and Deploying
 ###To get the source code and build the WAR file
 
 
-    git clone https://github.com/azwickey-pivotal/PCF-Bootcamp-VZ
+    git clone https://github.com/jtgammon/PCF-Bootcamp-Sony
 
     mvn clean package
 
