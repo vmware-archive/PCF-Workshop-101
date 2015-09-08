@@ -1,27 +1,124 @@
-# Pivotal Cloud Foundry Bootcamp
+= DocGist
 
-== Schedule
+toc::[]
 
-This one-day hands-on classroom style session will teach Pivotal Cloud Foundry basics, architecture and fundamentals of pushing code and building applications.
+DocGist is a URL proxy tool that converts http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc] documents fetched from Gists (http://gist.github.com), GitHub repositories, Dropbox folders and other sources to HTML.
+The conversion to HTML is performed in the browser (client-side) using the https://github.com/asciidoctor/asciidoctor.js[Asciidoctor.js] JavaScript library.
+DocGist can render documents located anywhere, as long as the host permits cross-domain access.
 
-9:00 AM - 10:00 AM:: *Session 1:* _Pivotal Cloud Foundry Architecture and Operations_
-10:00 AM - 10:15 AM:: Break
-10:15 AM - 11:15 AM:: *Session 3:* _Pivotal Cloud Foundry Architecture and Operations_
-11:15 AM - 12:15 PM:: *Session 4:* _Continuous Delivery and Microservices_
-12:00 PM - 1:00 PM:: Lunch
-12:45 PM - 1:30 PM:: *Session 5:* _Leveraging the Pivotal Cloud Foundry Marketplace_
-1:30 PM - 4:00 PM:: *Developer Workshop:* _Pushing Code with Pivotal Cloud Foundry_
-4:00 PM - 4:30 PM:: Wrap Up, Q&A, Feedback
+[NOTE]
+DocGist uses the http://asciidoctor.org/news/2014/08/12/asciidoctor-1-5-0-released/[latest release (1.5.2)] of Asciidoctor.
+If you want to use the syntax of older versions, add `:compat-mode:` to the document header.
+There's more information on this in the link:./?github-asciidoctor%2Fasciidoctor.org%2F%2Fdocs%2Fmigration.adoc[migration guide].
 
-== Course Materials
+The original idea and code for DocGist came from http://gist.neo4j.org[GraphGist].
+GraphGist is an interactive documentation tool for the Neo4j database and Cypher query language.
 
-* Session 1 Keynote: The Impact of DevOps for Verizon IT
-* Session 2 Openstack and the Impact to IT Operations
-* Session 3 link:presentations/ArchitectureAndOperations.pptx[Pivotal Cloud Foundry Architecture and Operations]
-* Session 4 link:presentations/microservice_CD.pptx[Continuous Delivery and Microservices]
-* Session 5 link:presentations/PCFMarketplaceOverview.pptx[Leveraging the Pivotal Cloud Foundry Marketplace]
-* Developer Workshop
-** link:dev-workshop/lab1/lab.html[Lab 1 - From Zero to Pushing Your First Application]
-** link:dev-workshop/lab2/lab.html[Lab 2 - Binding to Cloud Foundry Services]
-** link:dev-workshop/lab3/lab.html[Lab 3 - Operating Your Application]
-** link:dev-workshop/lab4/lab.html[Lab 4 - Monitoring Your Application]
+== How To Use
+
+* Create/locate a gist on GitHub (or use a file in Dropbox).
+** Write text using AsciiDoc syntax in it.
+** Save it.
+* Enter the URL (or id) of the gist in the form on top of this page and hit Enter on your keyboard.
+* The page is rendered.
+* Share the URL with others so they can read the page.
+
+== Images
+
+Relative image URLs are resolved to the same location as the document.
+If the images are located elsewhere, use the `imagesdir` attribute to point out the location.
+See the http://asciidoctor.org/docs/user-manual/#set-the-images-directory[Asciidoctor user manual] for the details.
+There's also an link:./?github-asciidoctor%2Fdocgist%2F%2Fgists%2Fimages.adoc[image example].
+
+----
+image::sunset.jpg[]
+----
+
+Is rendered as:
+
+image::sunset.jpg[]
+
+== Table of contents
+
+To add a table of contents, put this in the place you want it to appear:
+
+--
+ toc::[]
+--
+
+== Source code highlighting
+
+By default, source code is highlighted using https://highlightjs.org/[highlight.js].
+Simply include the source code like this:
+
+--
+ [source,ruby]
+ .app.rb
+ ----
+ require 'sinatra'
+ get '/hi' do
+   "Hello World!"
+ end
+ ----
+--
+
+This how it gets rendered:
+
+[source,ruby]
+.app.rb
+----
+require 'sinatra'
+get '/hi' do
+  "Hello World!"
+end
+----
+
+https://code.google.com/p/google-code-prettify/[Prettify] is supported as well.
+See the link:./?github-asciidoctor%2Fdocgist%2F%2Fgists%2Fprettify.adoc[Prettify example] for how to activate it.
+
+You can also choose to use https://codemirror.net/[CodeMirror], see the link:./?github-asciidoctor%2Fdocgist%2F%2Fgists%2Fcodemirror.adoc[CodeMirror example].
+
+NOTE: Only one source highlighter can be defined per document when using DocGist.
+
+== Math
+
+Thanks to https://www.mathjax.org/[MathJax] mathematical expressions can be typeset in DocGist documents.
+
+For block content, do like this:
+
+--
+ [stem]
+ ++++
+ sqrt(4) = 2
+ ++++
+--
+
+It will render like below:
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+You can use it inline as well, for example:
+
+--
+ Water (stem:[H_2O]) is a critical component.
+--
+
+Which renders like this: Water (stem:[H_2O]) is a critical component.
+
+== Tips and tricks
+
+Links to other DocGists can use this syntax: `+link:./?5897167[DocGist intro]+` which renders as link:./?5897167[DocGist intro].
+This makes things easier in case you run DocGist locally to fiddle with the "`backend`" (it's a frontend really).
+
+You can view the source Gist of this page by clicking on the green button in the navbar.
+
+How about some UML?
+The following image is included using the syntax `image::http://yuml.me/c9ce39b0.png[]`.
+
+image::http://yuml.me/c9ce39b0.png[]
+
+The URL is a reference to a yUML image.
+yUML is tool for creating UML diagrams online.
