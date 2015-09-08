@@ -17,8 +17,8 @@ This one-day hands-on classroom style session will teach Pivotal Cloud Foundry b
 * Misc: link:presentations/microservice_CD.pptx[Continuous Delivery and Microservices]
 
 * Developer Workshop
-** link:labs/lab1/lab.html[Lab 1 - From Zero to Pushing Your First Application]
-** link:labs/lab2/lab.html[Lab 2 - Binding to Cloud Foundry Services]
-** link:labs/lab3/lab.html[Lab 3 - Operating Your Application]
-** link:labs/lab4/lab.html[Lab 4 - Monitoring Your Application]
-** link:labs/lab5/lab.html[Lab 5 - Spring Cloud Services]
+** link:labs/lab1/lab.adoc[Lab 1 - From Zero to Pushing Your First Application]
+** link:labs/lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
+** link:labs/lab3/lab.adoc[Lab 3 - Operating Your Application]
+** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
+** link:labs/lab5/lab.adoc[Lab 5 - Spring Cloud Services]
