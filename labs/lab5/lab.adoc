@@ -7,7 +7,7 @@
 . Set the API target for the CLI:
 +
 ----
-$ cf api https://api.pcf.clouddemo.verizon.com --skip-ssl-validation
+$ cf api https://api.pcfsony.com --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
@@ -36,7 +36,7 @@ You should see output similar to the following listing. Take a look at the listi
 +
 ====
 ----
-Using manifest file /Users/azwickey/development/customers/verizon/PCF-Bootcamp/dev-workshop/cf-workshop-spring-mvc/manifest.yml <1>
+Using manifest file /Users/azwickey/development/customers/sony/PCF-Bootcamp/dev-workshop/cf-workshop-spring-mvc/manifest.yml <1>
 
 Creating app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
 OK <2>
@@ -48,7 +48,7 @@ Binding workshop-queasier-backup.vert.fe.gopivotal.com to workshop...
 OK <4>
 
 Uploading workshop... <5>
-Uploading app files from: /Users/azwickey/development/customers/verizon/PCF-Bootcamp/dev-workshop/cf-workshop-spring-mvc/target/cf-workshop-spring-mvc-0.1.war
+Uploading app files from: /Users/azwickey/development/customers/sony/PCF-Bootcamp/dev-workshop/cf-workshop-spring-mvc/target/cf-workshop-spring-mvc-0.1.war
 Uploading 496.9K, 75 files
 Done uploading
 OK
@@ -96,7 +96,7 @@ Take a look at `manifest.yml` to see how.
 <2> In most cases, the CLI indicates each Cloud Foundry API call as it happens.
 In this case, the CLI has created an application record for _Workshop_ in your assigned space.
 <3> All HTTP/HTTPS requests to applications will flow through Cloud Foundry's front-end router called http://docs.cloudfoundry.org/concepts/architecture/router.html[(Go)Router].
-Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `pcf.clouddemo.verizon.com` domain.
+Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `pcf.pcfsony.com` domain.
 <4> Now the CLI is _binding_ the created route to the application.
 Routes can actually be bound to multiple applications to support techniques such as http://www.mattstine.com/2013/07/10/blue-green-deployments-on-cloudfoundry[blue-green deployments].
 <5> The CLI finally uploads the application bits to Pivotal Cloudfoundry. Notice that it's uploading _75 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes.
