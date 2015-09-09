@@ -2,7 +2,7 @@
 Microservice version of the Spring Trader app using spring boot
 
 
-![Spring Trader](/docs/springtrader2.png)
+![Spring Trader](docs/springtrader2.png)
 
 #Introduction
 This repository holds a collection of micro services that work together to present a trading application surfaced though a web UI, but more interfaces can be created that re-utilise the microservices.
@@ -14,7 +14,7 @@ The workshops follow a series of exercises, or labs, and you can find links to t
 #Architecture
 The system is composed of 4 microservices plus a Registry Server (can also be considered a microservice). The relationship between the microservices is illustrated below.
 
-![architecture](/docs/microservices_relationship.png)
+![architecture](docs/microservices_relationship.png)
 
 ##1. Quote Microservice
 This service is a spring boot application responsible for providing up to date company and ticker/quote information. It does this by providing a REST api with 2 calls:
