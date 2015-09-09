@@ -20,10 +20,10 @@ Follow the prompts
 
 == Push It!
 
-. Change to the _cf-workshop-spring-mvc_ sample application directory:
+. Change to the _cf-spring-mvc_ sample application directory:
 +
 ----
-$ cd $BOOTCAMP_HOME/dev-workshop/cf-workshop-spring-mvc
+$ cd $BOOTCAMP_HOME/cf-spring-mvc
 ----
 
 . Push the application!
