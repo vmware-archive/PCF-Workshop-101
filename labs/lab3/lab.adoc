@@ -12,7 +12,7 @@ In the next two labs we'll explore Pivotal Cloudfoundry operations.
 +
 ----
 $ cf scale -i 3 workshop
-Scaling app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Scaling app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 ----
 +
@@ -23,7 +23,7 @@ In reporting `OK`, the CLI is letting you know that the additional requested ins
 ====
 ----
 $ cf app workshop
-Showing health and status for app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Showing health and status for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
 requested state: started
@@ -47,7 +47,7 @@ buildpack: java-buildpack=v3.0-offline-https://github.com/cloudfoundry/java-buil
 +
 ----
 $ cf app workshop[]
-Showing health and status for app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Showing health and status for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
 requested state: started
@@ -81,7 +81,7 @@ This makes for very dynamic and rapid reconfiguration!
 +
 ----
 $ cf scale -i 1 workshop
-Scaling app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Scaling app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 ----
 
@@ -89,7 +89,7 @@ OK
 +
 ----
 $ cf app workshop
-Showing health and status for app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Showing health and status for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
 requested state: started
@@ -148,7 +148,7 @@ image::lab6.png[]
 ====
 ----
 $ cf files workshop /
-Getting files for app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Getting files for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
 .bash_logout                              220B
@@ -161,7 +161,7 @@ staging_info.yml                          1.1K
 tmp/
 
 $ cf files workshop /app    <1>
-Getting files for app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Getting files for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
 .java-buildpack/                             -
@@ -176,7 +176,7 @@ resources/                                   -                                  
 +
 ----
 $ cf files workshop /staging_info.yml
-Getting files for app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+Getting files for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
 ---

@@ -92,7 +92,7 @@ image::papertrail_4.png[]
 +
 ----
 $ cf cups workshop-logs -l syslog://logs2.papertrailapp.com:43882
-Creating user provided service workshop-logs in org TELCO / space zwickey as admin...
+Creating user provided service workshop-logs in org TELCO / space gammon as admin...
 OK
 ----
 
@@ -100,7 +100,7 @@ OK
 +
 ----
 $ cf bind-service workshop workshop-logs
-Binding service workshop-logs to app workshop in org TELCO / space zwickey as admin...
+Binding service workshop-logs to app workshop in org TELCO / space gammon as admin...
 OK
 TIP: Use 'cf restage workshop' to ensure your env variable changes take effect
 ----
@@ -188,7 +188,7 @@ Take a look at the events that have transpired so far for our deployment of `wor
 ====
 ----
 $ cf events workshop
-Getting events for app workshop in org TELCO / space zwickey as admin...
+Getting events for app workshop in org TELCO / space gammon as admin...
 
 time                          event                 actor      description
 2015-08-11T08:58:57.00-0400   app.crash             workshop   index: 0, reason: CRASHED, exit_description: app instance exited, exit_status: 255  <6>
@@ -213,7 +213,7 @@ Here we see the `app.create` event, which created our application's record and s
 +
 ----
 $ cf stop workshop
-Stopping app workshop in org TELCO / space zwickey as admin...
+Stopping app workshop in org TELCO / space gammon as admin...
 OK
 ----
 
@@ -221,7 +221,7 @@ OK
 +
 ----
 $ cf events workshop
-Getting events for app workshop in org TELCO / space zwickey as admin...
+Getting events for app workshop in org TELCO / space gammon as admin...
 
 time                          event                 actor      description
 2015-08-11T09:01:35.00-0400   audit.app.update      admin      state: STOPPED
@@ -239,7 +239,7 @@ time                          event                 actor      description
 +
 ----
 $ cf start workshop
-Starting app workshop in org TELCO / space zwickey as admin...
+Starting app workshop in org TELCO / space gammon as admin...
 
 0 of 5 instances running, 5 starting
 2 of 5 instances running, 3 starting
@@ -251,7 +251,7 @@ OK
 
 App workshop was started using this command `JAVA_HOME=$PWD/.java-buildpack/open_jdk_jre JAVA_OPTS="-Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh -Xmx382293K -Xms382293K -XX:MaxMetaspaceSize=64M -XX:MetaspaceSize=64M -Xss995K -Djava.security.egd=file:///dev/urandom -Daccess.logging.enabled=false -Dhttp.port=$PORT" $PWD/.java-buildpack/tomcat/bin/catalina.sh run`
 
-Showing health and status for app workshop in org TELCO / space zwickey as admin...
+Showing health and status for app workshop in org TELCO / space gammon as admin...
 OK
 
 requested state: started
@@ -274,7 +274,7 @@ buildpack: java-buildpack=v3.0-offline-https://github.com/cloudfoundry/java-buil
 +
 ----
 $ cf events workshop
-Getting events for app workshop in org TELCO / space zwickey as admin...
+Getting events for app workshop in org TELCO / space gammon as admin...
 
 time                          event                 actor      description
 2015-08-11T09:02:17.00-0400   audit.app.update      admin      state: STARTED
