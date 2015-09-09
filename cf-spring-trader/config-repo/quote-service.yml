@@ -1,0 +1,5 @@
+---
+spring:
+  profiles: local
+server:
+  port: 8083

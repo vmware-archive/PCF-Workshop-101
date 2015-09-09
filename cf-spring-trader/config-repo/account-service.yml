@@ -1,0 +1,16 @@
+spring:
+  profiles.active: local
+  application:
+     name: account-service
+  jpa:
+     hibernate:
+        ddl-auto: update
+
+---
+spring:
+  profiles: local
+server:
+  port: 8082
+eureka:
+  instance:
+    nonSecurePort: ${server.port}

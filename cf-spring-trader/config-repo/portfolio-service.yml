@@ -1,0 +1,14 @@
+---
+spring:
+  profiles: local
+  jpa:
+     hibernate:
+        ddl-auto: update
+server:
+  port: 8081
+---
+spring:
+  profiles: cloud
+  jpa:
+     hibernate:
+        ddl-auto: update
