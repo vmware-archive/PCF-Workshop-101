@@ -132,7 +132,7 @@ $ cf app <<app_name>>
 . Stop the deployed application using the CLI
 +
 ----
-$ cf stock <<app_name>>
+$ cf stop <<app_name>>
 ----
 
 . Delete the deployed application using the CLI
