@@ -10,6 +10,8 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
   `https:\\https://github.com/cloudfoundry-samples/spring-music.git`
   
+. Edit the manifest.yml at the root of the forked spring-music repository. Change the *host* from ${random-word} to your initials. Jenkins does not like the special characters in the host field and will give an error.
+  
 . Login to your Jenkins instance at https://jenkins-0.pcfsony.com with the same username and password that you use for CloudFoundry.
 
 . Navigate to your username folder.
@@ -33,7 +35,25 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Enter your Organization and Space for CloudFoundry.
 
-. Select *Add Post-build Action* and then *Push to CloudFoundry*
+<br>
+
+. Select *Add Build Step* and then *Invoke Gradle Script*.
+
+. Select *Use Grade Wrapper*.
+
+. Check both *Make gradlew executable* and *From Root Build Script Directory*.
+
+. In switches, enter `-Pbuildversion=$BUILD_NUMBER`.
+
+. In tasks, enter `clean assemble`.
+
+. In build file, enter `build.gradle`.
+
+. Check *Force GRADLE_USER_HOME to use workspace.
+
+<br>
+
+. Select *Add Post-build Action* and then *Push to CloudFoundry*.
 
 . Under *Target*, enter `https://api.pcfsony.com`.
 
