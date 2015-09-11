@@ -2,28 +2,18 @@
 
 == Intro
 
-This lab will guide you through building a BASIC continuous delivery pipeline using Jenkins, Artifactory, and Cloud Foundry.
+This lab will guide you through building a *BASIC* continuous delivery pipeline using Jenkins and Cloud Foundry.
 
-== Setup Steps
-
-. Login to your Jenkins instance at https://jenkins-0.pcfsony.com.
-
-. Make sure the following plug-ins are installed:
-+
-* Gradle
-* Mask Passwords
-* Extensible Choice Parameter Plugin
-* Artifactory Plugin
-* Parameterized Trigger Plugin
-* CloudFoundry
 
 == Create the Initial Build Job
 
-. Navigate back to Jenkins Home.
+. Login to your Jenkins instance at https://jenkins-0.pcfsony.com with the same username and password that you use for CloudFoundry.
 
-. Click +New Job+, give it the name +cf-spring-mvc+ and select ``Build a free-style software project.'' Then click +OK+.
+. Navigate back to Jenkins Home, then navigate to your username folder.
 
-. Under +Source Code Management+, select +Git+, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/cf-spring-mvc`).
+. Click +New Item+, give it the name +cf-spring-mvc+ and select ``Build a free-style software project.'' Then click +OK+.
+
+. Under +Source Code Management+, select +Git+, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/cf-spring-mvc`). You may need to fork the repository if you have not already, or simply use my repository (e.g. `https://github.com/jtgammon/PCF-Workshop-Sony.git/cf-spring-mvc`).
 
 . Under +Build Triggers+, select +Poll SCM+ and provide the string +* * * * *+.
 
