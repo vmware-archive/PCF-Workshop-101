@@ -63,7 +63,7 @@ At Pivotal we love education, not just educating ourselves, but also educating o
 [setup]: docs/lab_setup.md
 
 [userprovided]: docs/lab_userprovided.md
-[configureservices]: docs/lab_bluegreen.adoc
+[configureservices]: docs/configuration.adoc
 [pushquote]: docs/lab_pushquote.md
 [pushall]: docs/lab_pushall.adoc
 [scale]: docs/lab_scale.md
