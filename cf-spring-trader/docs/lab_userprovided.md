@@ -6,19 +6,19 @@ In the previous lab, you deployed a single microservice that has no dependencies
 In order for our microservices to be able to connect to the Registry service, we will have to create a [*User-provided service*](http://docs.pivotal.io/pivotalcf/devguide/services/user-provided.html). This tells our microservices where to find the registry service.
 
 ### Exercise
-1. Create a *marketplace service* using the CLI.
+1. Create the *marketplace services* using the CLI.
 
   `./create-services.sh`
 
 This simple script creates 4 services:
 
-`#!/usr/bin/env bash`<br>
-`cf create-service p-mysql 100mb-dev trader-db`<br>
-`cf create-service p-service-registry standard trader-registry`<br>
-`cf create-service p-config-server standard config-server`<br>
-`cf create-service p-circuit-breaker-dashboard standard trader-dashboard`<br>
+  `#!/usr/bin/env bash`<br>
+  `cf create-service p-mysql 100mb-dev trader-db`<br>
+  `cf create-service p-service-registry standard trader-registry`<br>
+  `cf create-service p-config-server standard config-server`<br>
+  `cf create-service p-circuit-breaker-dashboard standard trader-dashboard`<br>
 
 # Summary
-You have now created marketplace services via the CLI.
+You have now created marketplace services via the CLI!
 
 Move on to [pushing the quote service lab](lab_pushquote.md).
