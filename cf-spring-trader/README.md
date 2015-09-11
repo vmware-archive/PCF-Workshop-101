@@ -57,7 +57,7 @@ The following guides describe how to setup the environment and deploy the micros
 At Pivotal we love education, not just educating ourselves, but also educating others. As such, these guides follow the *"teaching you how to fish"* principle - Rather than giving you line by line/command by command instructions, we provide guidelines and links to documentation where you can read and learn more.
 
 1. [Setting up the environment] [setup]
-2. [Creating a user provided service] [userprovided]
+2. [Create services] [userprovided]
 3. [Pushing the Quote service] [pushquote]
 4. [Pushing all the services] [pushall]
 5. [Scaling the services] [scale]
