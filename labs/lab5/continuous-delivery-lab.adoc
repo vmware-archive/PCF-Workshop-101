@@ -23,11 +23,11 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Click *New Item*, give it the name *spring-music* and select ``Build a free-style software project.'' Then click +OK+.
 
-=== Configure Git
+===== Configure Git
 
 . Under *Source Code Management*, select *Git*, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/spring-music`). Leave credentials as *none*.
 
-=== Configure CF Build Environment
+===== Configure CF Build Environment
 
 . Under *Build Environment*, select *Setup CloudFoundry CLI*.
 
@@ -39,7 +39,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Enter your Organization and Space for CloudFoundry.
 
-=== Configure Gradle Build
+===== Configure Gradle Build
 
 . Select *Add Build Step* and then *Invoke Gradle Script*.
 
@@ -55,7 +55,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Check *Force GRADLE_USER_HOME to use workspace.
 
-=== Configure CF Push
+===== Configure CF Push
 
 . Select *Add Post-build Action* and then *Push to CloudFoundry*.
 
