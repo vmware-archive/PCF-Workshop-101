@@ -19,7 +19,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 . Click *Configure* and then *Credentials*, and enter your CloudFoundry credentials. Then click *Save*.
 
 
-== Create the Initial Build Job
+== Create the Build Job
 
 . Click *New Item*, give it the name *spring-music* and select ``Build a free-style software project.'' Then click +OK+.
 
@@ -67,6 +67,12 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Check *Allow Self-Signed Certificates*.
 
-. Save the config
+. Save the config.
 
+== Execute Build Job
 
+. Select *Build Now*.
+
+. Select the build in *Build History*, then select *Console Output*.
+
+. Jenkins should build and push the app, then you can click the link at the bottom to see the running app.
