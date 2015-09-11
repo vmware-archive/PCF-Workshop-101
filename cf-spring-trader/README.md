@@ -56,16 +56,14 @@ The following guides describe how to setup the environment and deploy the micros
 
 At Pivotal we love education, not just educating ourselves, but also educating others. As such, these guides follow the *"teaching you how to fish"* principle - Rather than giving you line by line/command by command instructions, we provide guidelines and links to documentation where you can read and learn more.
 
-1. [Setting up the environment] [setup]
-2. [Create services] [userprovided]
-3. [Pushing the Quote service] [pushquote]
-4. [Pushing all the services] [pushall]
-5. [Scaling the services] [scale]
-6. [Blue/Green deployments] [bluegreen]
+1. [Create the services] [userprovided]
+2. [Configure the services] [configureservices]
+3. [Push the apps] [pushall]
 
 [setup]: docs/lab_setup.md
 
 [userprovided]: docs/lab_userprovided.md
+[configureservices]: docs/configureservices.md
 [pushquote]: docs/lab_pushquote.md
 [pushall]: docs/lab_pushall.md
 [scale]: docs/lab_scale.md
