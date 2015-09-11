@@ -4,18 +4,28 @@
 
 This lab will guide you through building a *BASIC* continuous delivery pipeline using Jenkins and Cloud Foundry.
 
+== Initial Setup
+
+. Fork the Spring-Music repository. If you do not have a github account, you can skip this step and use my repository.
+
+  `https:\\https://github.com/cloudfoundry-samples/spring-music.git`
+  
+. Login to your Jenkins instance at https://jenkins-0.pcfsony.com with the same username and password that you use for CloudFoundry.
+
+. Navigate to your username folder.
+
+. Click *Configure* and then *Credentials*, and enter your git credentials. Then click *Save*.
+
 
 == Create the Initial Build Job
 
-. Login to your Jenkins instance at https://jenkins-0.pcfsony.com with the same username and password that you use for CloudFoundry.
+. Click *New Item*, give it the name *spring-music* and select ``Build a free-style software project.'' Then click +OK+.
 
-. Navigate back to Jenkins Home, then navigate to your username folder.
+. Under *Source Code Management*, select *Git*, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/spring-music`). Select your credentials.
 
-. Click +New Item+, give it the name +cf-spring-mvc+ and select ``Build a free-style software project.'' Then click +OK+.
+. Under *Build Environment*, select *Setup CloudFoundry CLI*.
 
-. Under +Source Code Management+, select +Git+, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/cf-spring-mvc`). You may need to fork the repository if you have not already, or simply use my repository (e.g. `https://github.com/jtgammon/PCF-Workshop-Sony.git/cf-spring-mvc`).
-
-. Under +Build Triggers+, select +Poll SCM+ and provide the string +* * * * *+.
+. Under *API Endpoint*, select `https://api.pcfsony.com`.
 
 . Under +Build+, add a +Invoke Gradle Script+ build step.
 +
