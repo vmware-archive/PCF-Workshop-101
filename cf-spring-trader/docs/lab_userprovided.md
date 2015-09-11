@@ -12,11 +12,11 @@ In order for our microservices to be able to connect to the Registry service, we
 
 This simple script creates 4 services:
 
-#!/usr/bin/env bash
-cf create-service p-mysql 100mb-dev trader-db
-cf create-service p-service-registry standard trader-registry
-cf create-service p-config-server standard config-server
-cf create-service p-circuit-breaker-dashboard standard trader-dashboard
+`#!/usr/bin/env bash`<br>
+`cf create-service p-mysql 100mb-dev trader-db`<br>
+`cf create-service p-service-registry standard trader-registry`<br>
+`cf create-service p-config-server standard config-server`<br>
+`cf create-service p-circuit-breaker-dashboard standard trader-dashboard`<br>
 
 # Summary
 You have now created marketplace services via the CLI.
