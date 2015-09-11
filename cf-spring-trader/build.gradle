@@ -1,7 +1,7 @@
 buildscript {
 	ext {
 		springBootVersion = '1.2.3.RELEASE'
-		springCloudVersion = '1.0.0.BUILD-SNAPSHOT'
+		springCloudVersion = '1.0.0.M1'
 		springCFCloudVersion = '1.1.1.RELEASE'
 		springSecurityVersion = '4.0.1.RELEASE'
 		springVersion = '4.1.6.RELEASE'
