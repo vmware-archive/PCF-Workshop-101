@@ -15,10 +15,12 @@ In this exercise, we will be deploying all the applications in the project to th
 . Edit the manifest-all.yml to change the `name` field to something unique for each of the applications. Otherwise you will get an error if someone else deploys an app that uses the same hostname.
 
 ----
-quotes-> quotes-initials
-accounts -> accounts-initials
-portfolio -> portfolio-initials
-webtrader -> webtrader-initials
+
+quotes-> quotes-initials<br>
+accounts -> accounts-initials<br>
+portfolio -> portfolio-initials<br>
+webtrader -> webtrader-initials<br>
+
 ----
 
 . cf push -f manifest-all.yml
