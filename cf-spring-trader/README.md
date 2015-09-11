@@ -50,7 +50,7 @@ This service provides a registry for our microservices to register with and dyna
 
 This is currently implemented using the [Spring Cloud Netflix - Eureka](http://cloud.spring.io/spring-cloud-netflix/).
 
-# Workshops:
+# Workshop:
 
 The following guides describe how to setup the environment and deploy the microservices to **Cloud Foundry**.
 
@@ -58,7 +58,7 @@ At Pivotal we love education, not just educating ourselves, but also educating o
 
 1. [Create the services] [userprovided]
 2. [Configure the services] [configureservices]
-3. [Push the apps] [pushall]
+3. [Build and Push the apps] [pushall]
 
 [setup]: docs/lab_setup.md
 
