@@ -16,10 +16,10 @@ In this exercise, we will be deploying all the applications in the project to th
 
 ----
 
-quotes-> quotes-initials<br>
-accounts -> accounts-initials<br>
-portfolio -> portfolio-initials<br>
-webtrader -> webtrader-initials<br>
+quotes-> quotes-initials
+accounts -> accounts-initials
+portfolio -> portfolio-initials
+webtrader -> webtrader-initials
 
 ----
 
