@@ -1,5 +1,4 @@
 = CF Workshop Continuous Delivery Lab
-Matt Stine <matt.stine@gmail.com>
 
 == Intro
 
@@ -7,81 +6,26 @@ This lab will guide you through building a BASIC continuous delivery pipeline us
 
 == Setup Steps
 
-. FORK (using the GitHub UI) and clone the [citytest repo](https://github.com/mstine/citytest):
-+
-[source,bash]
-----
-$ git clone https://github.com/<YOUR_GIT_USERNAME>/citytest
-$ cd citytest
-----
+. Login to your Jenkins instance at https://jenkins-0.pcfsony.com.
 
-. Login to your Jenkins instance at CloudBees.
-
-. Navigate to +Manage Jenkins > Manage Plugins > Available+.
-
-. Install the following plugins:
+. Make sure the following plug-ins are installed:
 +
 * Gradle
 * Mask Passwords
 * Extensible Choice Parameter Plugin
 * Artifactory Plugin
 * Parameterized Trigger Plugin
-+
-When you do, tell Jenkins to restart after plugin install.
-
-. Login to your Aritfactory Online instance.
-
-. Navigate to +Admin > Security > General+.
-
-. Activate encryption for passwords.
-
-. Next navigate to +Admin > Security > Users+.
-
-. Create a new user named +deployer+ with a password of your choosing.
-
-. Once created, navigate to +Admin > Security > Permissions+.
-
-. +Edit+ the +Anything+ permissions target.
-
-. Select the +Users+ tab, and check all permissions for your new user.
-
-. Logout, and then log back in as your new user.
-
-. Click on the account name in the top right hand corner of the screen.
-
-. Enter your password and click +Unlock+.
-
-. Copy your encrypted password and paste it somewhere safe.
-
-. Next, go back to Jenkins. And navigate to +Manage Jenkins > Configure System+.
-
-. Find Artifactory, and add a new Artifactory server:
-+
-URL:: `https://<<your artifactory hostname>>.artifactoryonline.com/<<your artifactory hostname>>` (e.g. +https://mattstine.artifactoryonline.com/mattstine+)
-Username:: the user you created in artifactory
-Password:: the encrypted password you copied a moment ago
-
-. Click +Apply+. Then click +Test Connection+ and ensure things are working.
+* CloudFoundry
 
 == Create the Initial Build Job
 
 . Navigate back to Jenkins Home.
 
-. Click +New Job+, give it the name +citytest+ and select ``Build a free-style software project.'' Then click +OK+.
+. Click +New Job+, give it the name +cf-spring-mvc+ and select ``Build a free-style software project.'' Then click +OK+.
 
-. Under +Source Code Management+, select +Git+, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/citytest`).
+. Under +Source Code Management+, select +Git+, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/cf-spring-mvc`).
 
 . Under +Build Triggers+, select +Poll SCM+ and provide the string +* * * * *+.
-
-. Under +Build Environment+, select +Gradle-Artifactory Integration+.
-+
-* Select your Artifactory server.
-* Select +libs-releases_local+ as the +Publishing Respoitory+.
-* Ensure the following are checked:
-** Capture and publish build info
-** Allow promotion of non-staged builds
-** Publish artifacts to Artifactory
-** Publish Ivy descriptors
 
 . Under +Build+, add a +Invoke Gradle Script+ build step.
 +
