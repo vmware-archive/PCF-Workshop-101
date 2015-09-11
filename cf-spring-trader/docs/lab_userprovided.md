@@ -26,5 +26,3 @@ This simple script creates 4 services:
 You have now created marketplace services via the CLI! You can now log in and see the services in your space at `https://console.pcfsony.com`, or see the services from the CLI.
 
   `> cf services`
-
-Move on to [pushing the quote service lab](lab_pushquote.md).
