@@ -1,4 +1,4 @@
-= Confugre the Config-Server
+= Configure the Config-Server
 
 One of the benefits of Spring Cloud Services is the ability to configure a running microservice via a github repository. This can be useful especially in situations where localization is needed.
 
