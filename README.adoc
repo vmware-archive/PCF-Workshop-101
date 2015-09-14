@@ -11,7 +11,7 @@ This one day hands-on classroom style session will provide developers (and opera
 ** Pushing your first app
 ** Apps Managers
 10:45 AM - 11:00 AM:: Break
-11:00 AM - 12:00 PM:: Labs
+11:00 AM - 12:00 PM: Session 2: Pivotal Cloud Foundry Architecture and Operations
 12:00 PM - 1:00 PM:: Lunch
 1:00 PM - 4:00 PM:: Labs
 
