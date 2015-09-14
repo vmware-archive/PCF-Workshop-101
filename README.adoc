@@ -5,12 +5,10 @@
 This one day hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
 
 8:30 AM - 9:00:: Registration and Breakfast
-8:00 AM - 9:30 AM:: *Session 1:* _Cloud-Native Architecture Overview and Building Twelve-Factor Apps with Spring Boot_
-9:00 AM - 10:45 AM:: *Session 1:* _Welcome to the Cloud Native Enterprise_
-* Demo: 
-** Ops Manager
-** Pushing your first app
-** Apps Managers
+9:00 AM - 10:45 AM:: *Session 1:* _Welcome to the Cloud Native Enterprise_ 
+*Demo:* Ops Manager, Pushing your first app, Apps Manager ::
+
+
 10:30 AM - 10:45 AM:: Break
 10:45 AM - 12:15 PM: Session 2:: 
 * Pivotal Cloud Foundry Architecture and Containers
