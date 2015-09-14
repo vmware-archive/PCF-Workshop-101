@@ -5,7 +5,8 @@
 This one day hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
 
 8:30 AM - 9:00:: Registration and Breakfast
-9:00 AM - 10:45 AM: Session 1: Welcome to the Cloud Native Enterprise::
+9:00 AM - 10:45 AM::
+Session 1: Welcome to the Cloud Native Enterprise::
 * Demo: 
 ** Ops Manager
 ** Pushing your first app
@@ -18,7 +19,12 @@ This one day hands-on classroom style session will provide developers (and opera
 1:00 PM - 1:45 PM:: Session 3: Pivotal Cloud Foundry Services::
 1:45 AM - 2:00 PM:: Break
 2:00 PM - 4:00 PM:: Labs
-
+* Lab 1 - From Zero to Pushing Your First Application
+* Lab 2 - Binding to Cloud Foundry Services
+* Lab 3 - Operating Your Application
+* Lab 4 - Monitoring Your Application
+* Lab 5 - Jenkins Integration
+* Lab 6 - Spring Cloud Services
 
 == Course Materials
 
