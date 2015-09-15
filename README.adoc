@@ -22,7 +22,7 @@ This one day hands-on classroom style session will provide developers (and opera
 == Course Materials
 
 * Session 1: link:presentations/Session_1_Cloud_Native_Enterprise.pptx[Welcome to the Cloud Native Enterprise]
-* Session 3: link:presentations/Session_2_Architecture_And_Operations.pptx[Pivotal Cloud Foundry Architecture and Operations]
+* Session 2: link:presentations/Session_2_Architecture_And_Operations.pptx[Pivotal Cloud Foundry Architecture and Operations]
 * Session 3: link:presentations/Session_3_Services_Overview.pptx[Pivotal Cloud Foundry Services]
 
 
