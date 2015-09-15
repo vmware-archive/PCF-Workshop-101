@@ -21,8 +21,10 @@ This one day hands-on classroom style session will provide developers (and opera
 
 == Course Materials
 
-* Session 1: link:presentations/ArchitectureAndOperations.pptx[Pivotal Cloud Foundry Architecture and Operations]
-* Misc: link:presentations/microservice_CD.pptx[Continuous Delivery and Microservices]
+* Session 1: link:presentations/Session_1_Cloud_Native_Enterprise.pptx[Welcome to the Cloud Native Enterprise]
+* Session 3: link:presentations/Session_2_Architecture_And_Operations.pptx[Pivotal Cloud Foundry Architecture and Operations]
+* Session 3: link:presentations/Session_3_Services_Overview.pptx[Pivotal Cloud Foundry Services]
+
 
 * Developer Workshop
 ** link:labs/lab1/lab.adoc[Lab 1 - From Zero to Pushing Your First Application]
