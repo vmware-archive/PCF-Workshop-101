@@ -36,7 +36,7 @@ You should see output similar to the following listing. Take a look at the listi
 +
 ====
 ----
-Using manifest file /Users/phopper/Documents/workspace/fieldEngineering/NBCU-PCF-Workshop-101/nodejs-cf-sample-app/manifest.yml <1>
+Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/nodejs-cf-sample-app/manifest.yml <1>
 
 Creating app nodejs in org TELCO / space hopper as phopper@pivotal.io...
 OK <2>
