@@ -20,10 +20,10 @@ Follow the prompts
 
 == Push It!
 
-. Change to the _cf-spring-mvc_ sample application directory:
+. Change to the _cf-spring-mvc-boot_ sample application directory:
 +
 ----
-$ cd $BOOTCAMP_HOME/cf-spring-mvc
+$ cd $BOOTCAMP_HOME/cf-spring-mvc-boot
 ----
 
 . Push the application!
@@ -36,60 +36,57 @@ You should see output similar to the following listing. Take a look at the listi
 +
 ====
 ----
-Using manifest file /Users/jtgammon/development/customers/sony/PCF-Bootcamp/dev-workshop/cf-workshop-spring-mvc/manifest.yml <1>
+Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/manifest.yml <1>
 
-Creating app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
+Creating app workshop in org TELCO / space hopper as phopper@pivotal.io...
 OK <2>
 
-Creating route workshop-queasier-backup.vert.fe.gopivotal.com...
+Creating route workshop-philologic-catchpolery.vert.fe.gopivotal.com...
 OK <3>
 
-Binding workshop-queasier-backup.vert.fe.gopivotal.com to workshop...
+Binding workshop-philologic-catchpolery.vert.fe.gopivotal.com to workshop...
 OK <4>
 
 Uploading workshop... <5>
-Uploading app files from: /Users/jtgammon/development/customers/sony/PCF-Bootcamp/dev-workshop/cf-workshop-spring-mvc/target/cf-workshop-spring-mvc-0.1.war
-Uploading 496.9K, 75 files
-Done uploading
+Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/target/cf-spring-mvc-boot-0.0.1-SNAPSHOT.jar
+Uploading 10.6M, 153 files
+Done uploading               
 OK
 
-Starting app workshop in org TELCO / space gammon as jtgammon@pivotal.io... <6>
------> Downloaded app package (16M)
------> Java Buildpack Version: v3.0 (offline) | https://github.com/cloudfoundry/java-buildpack.git#3bd15e1
------> Downloading Open Jdk JRE 1.8.0_40 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_40.tar.gz (found in cache)
-       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.4s) <7>
+Starting app workshop in org TELCO / space hopper as phopper@pivotal.io... <6>
+-----> Downloaded app package (27M)
+-----> Java Buildpack Version: v3.1.1 (offline) | https://github.com/cloudfoundry/java-buildpack#7a538fb
+-----> Downloading Open Jdk JRE 1.8.0_51 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_51.tar.gz (found in cache) <7>
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.5s)
+-----> Downloading Open JDK Like Memory Calculator 1.1.1_RELEASE from https://download.run.pivotal.io/memory-calculator/trusty/x86_64/memory-calculator-1.1.1_RELEASE (found in cache)
+       Memory Settings: -Xss995K -Xmx382293K -Xms382293K -XX:MaxMetaspaceSize=64M -XX:MetaspaceSize=64M
 -----> Downloading Spring Auto Reconfiguration 1.7.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.7.0_RELEASE.jar (found in cache)
-       Modifying /WEB-INF/web.xml for Auto Reconfiguration
------> Downloading Tomcat Instance 8.0.21 from https://download.run.pivotal.io/tomcat/tomcat-8.0.21.tar.gz (found in cache)
-       Expanding Tomcat to .java-buildpack/tomcat (0.1s) <8>
------> Downloading Tomcat Lifecycle Support 2.4.0_RELEASE from https://download.run.pivotal.io/tomcat-lifecycle-support/tomcat-lifecycle-support-2.4.0_RELEASE.jar (found in cache)
------> Downloading Tomcat Logging Support 2.4.0_RELEASE from https://download.run.pivotal.io/tomcat-logging-support/tomcat-logging-support-2.4.0_RELEASE.jar (found in cache)
------> Downloading Tomcat Access Logging Support 2.4.0_RELEASE from https://download.run.pivotal.io/tomcat-access-logging-support/tomcat-access-logging-support-2.4.0_RELEASE.jar (found in cache)
 
------> Uploading droplet (67M) <9>
+-----> Uploading droplet (72M) <8>
 
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
 1 of 1 instances running
 
 App started
 
-
 OK
 
-App workshop was started using this command `JAVA_HOME=$PWD/.java-buildpack/open_jdk_jre JAVA_OPTS="-Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh -Xmx382293K -Xms382293K -XX:MaxMetaspaceSize=64M -XX:MetaspaceSize=64M -Xss995K -Daccess.logging.enabled=false -Dhttp.port=$PORT" $PWD/.java-buildpack/tomcat/bin/catalina.sh run` <10>
+App workshop was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-1.1.1_RELEASE -memorySizes=metaspace:64m.. -memoryWeights=heap:75,metaspace:10,stack:5,native:10 -totMemory=$MEMORY_LIMIT) && SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.7.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY -Djava.security.egd=file:///dev/urandom org.springframework.boot.loader.JarLauncher` <9>
 
-Showing health and status for app workshop in org TELCO / space gammon as jtgammon@pivotal.io... <11>
+Showing health and status for app workshop in org TELCO / space hopper as phopper@pivotal.io... <10>
 OK
 
 requested state: started
 instances: 1/1
 usage: 512M x 1 instances
-urls: workshop.vert.fe.gopivotal.com
-last uploaded: Fri Aug 7 13:12:04 UTC 2015
+urls: workshop-philologic-catchpolery.vert.fe.gopivotal.com
+last uploaded: Thu Sep 24 20:15:27 UTC 2015
 stack: cflinuxfs2
-buildpack: java-buildpack=v3.0-offline-https://github.com/cloudfoundry/java-buildpack.git#3bd15e1 open-jdk-jre=1.8.0_40 spring-auto-reconfiguration=1.7.0_RELEASE tomcat-access-logging-support=2.4.0_RELEASE tomcat-instance=8.0.21 tomcat-lifecycle-support=2.4.0_REL...
+buildpack: java-buildpack=v3.1.1-offline-https://github.com/cloudfoundry/java-buildpack#7a538fb java-main java-opts open-jdk-like-jre=1.8.0_51 open-jdk-like-memory-calculator=1.1.1_RELEASE spring-auto-reconfiguration=1.7.0_RELEASE
 
-     state     since                    cpu    memory           disk           details
-#0   running   2015-08-07 09:12:37 AM   0.0%   399.2M of 512M   144.4M of 1G
+     state     since                    cpu    memory           disk           details   
+#0   running   2015-09-24 02:16:11 PM   2.4%   392.6M of 512M   151.6M of 1G 
 ----
 <1> The CLI is using a manifest to provide necessary configuration details such as application name, memory to be allocated, and path to the application artifact.
 Take a look at `manifest.yml` to see how.
@@ -102,16 +99,15 @@ Routes can actually be bound to multiple applications to support techniques such
 <5> The CLI finally uploads the application bits to Pivotal Cloudfoundry. Notice that it's uploading _75 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes.
 <6> Now we begin the staging process. The https://github.com/cloudfoundry/java-buildpack[Java Buildpack] is responsible for assembling the runtime components necessary to run the application.
 <7> Here we see the version of the JRE that has been chosen and installed.
-<8> And here we see the version of Tomcat that has been chosen and installed.
-<9> The complete package of your application and all of its necessary runtime components is called a _droplet_.
+<8> The complete package of your application and all of its necessary runtime components is called a _droplet_.
 Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Droplet Execution Agents (DEA's)]_ for execution.
-<10> The CLI tells you exactly what command and argument set was used to start your application.
-<11> Finally the CLI reports the current status of your application's health.
+<9> The CLI tells you exactly what command and argument set was used to start your application.
+<10> Finally the CLI reports the current status of your application's health.
 ====
 
 . Visit the application in your browser by hitting the route that was generated by the CLI:
 +
-image::lab.png[]
+image::lab-java.png[]
 
 == Interact with App from CF CLI
 
