@@ -1,0 +1,100 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pivotal CF Workshop | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+    <nav class="top-bar" >
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="./">Pivotal CF</a></h1>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <h3>Welcome to Pivotal CF</h3>
+            <hr/>
+        </div>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <h3>All Attendees</h3>
+                <hr/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <table>
+                    <thead>
+                    <tr>
+                        <th> </th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip Code</th>
+                        <th>Phone</th>
+                        <th>Email Address</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="attendee: ${attendees}">
+                            <td><a href="index.html" th:href="@{delete(attendeeId=${attendee.id})}"><img alt="Delete" src="img/delete.jpeg" width="20" height="20"/></a></td>
+                            <td th:text="${attendee.firstName}"/>
+                            <td th:text="${attendee.lastName}"/>
+                            <td th:text="${attendee.address}"/>
+                            <td th:text="${attendee.city}"/>
+                            <td th:text="${attendee.state}"/>
+                            <td th:text="${attendee.zipCode}"/>
+                            <td th:text="${attendee.phoneNumber}"/>
+                            <td th:text="${attendee.emailAddress}"/>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="panel">
+                    <h4>Environment Information</h4><br/>
+                    <p>The current server time is <em><span th:text="${serverTime}"/></em></p>
+                    <p>The application port is <em><span th:text="${port}" /></em></p>
+                    <p>The instance ID is <em><span th:text="${vcapApplication['instance_id']}"/></em></p>
+                    <p>The instance index is <em><span th:text="${vcapApplication['instance_index']}"/></em></p>
+                    <p>The instance was started at <em><span th:text="${vcapApplication['started_at']}"/></em></p>
+                    <p>The bound services are <em><span th:text="${vcapServices}"/></em></p>
+                </div>
+                <hr/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <!-- This simply refreshes the page to demonstrate changed (or unchanged) ports -->
+                <a href="javascript:window.location.reload();" class="medium button">Refresh</a>
+                <!-- This link should be changed to the application's kill action -->
+                <a href="kill" class="medium alert button">Kill</a>
+            </div>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+
+    </div>
+
+</body>
+</html>
