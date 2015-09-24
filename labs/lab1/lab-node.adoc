@@ -20,7 +20,7 @@ Follow the prompts
 
 == Push It!
 
-. Change to the _cf-spring-mvc_ sample application directory:
+. Change to the _nodejs-cf-sample-ap_ sample application directory:
 +
 ----
 $ cd $BOOTCAMP_HOME/nodejs-cf-sample-ap
@@ -48,7 +48,7 @@ Binding nodejs-portless-lummox.vert.fe.gopivotal.com to nodejs...
 OK <4>
 
 Uploading nodejs... <5>
-Uploading app files from: /Users/phopper/Documents/workspace/fieldEngineering/NBCU-PCF-Workshop-101/nodejs-cf-sample-app
+Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/nodejs-cf-sample-app
 Uploading 259K, 39 files
 Done uploading               
 OK

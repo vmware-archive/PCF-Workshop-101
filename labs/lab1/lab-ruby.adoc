@@ -20,10 +20,10 @@ Follow the prompts
 
 == Push It!
 
-. Change to the _cf-spring-mvc_ sample application directory:
+. Change to the _pcf-autoscale_ sample application directory:
 +
 ----
-$ cd $BOOTCAMP_HOME/cf-spring-mvc
+$ cd $BOOTCAMP_HOME/pcf-autoscale
 ----
 
 . Push the application!
@@ -48,7 +48,7 @@ Binding scale-nonsynodical-hartal.vert.fe.gopivotal.com to scale-demo...
 OK <4>
 
 Uploading scale-demo... <5>
-Uploading app files from: /Users/phopper/Documents/workspace/fieldEngineering/NBCU-PCF-Workshop-101/pcf-autoscale
+Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/pcf-autoscale
 Uploading 242.4K, 24 files
 Done uploading               
 OK
