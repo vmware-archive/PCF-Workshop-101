@@ -27,7 +27,7 @@ This one day hands-on classroom style session will provide developers (and opera
 
 * Developer Workshop
 ** Lab 1 - From Zero to Pushing Your First Application
-*** link:labs/lab1/lab-java.adoc[**Java** Application]
+*** link:labs/lab1/lab.adoc[**Java** Application]
 *** link:labs/lab1/lab-ruby.adoc[**Ruby** Application]
 *** link:labs/lab1/lab-node.adoc[**NodeJS** Application]
 ** link:labs/lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
