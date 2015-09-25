@@ -44,7 +44,7 @@ module.exports = function (app) {
 
 	app.get('/*', function (req, res) {
         reqCount++;
-        var app_info = JSON.parse(process.env.VCAP_APPLICATION);
+		var app_info = process.env.VCAP_APPLICATION != null ? JSON.parse(process.env.VCAP_APPLICATION) : JSON.parse('{ }');
         console.log('App Info: ' + JSON.stringify(app_info));
         var limits = app_info.limits;
         var services = process.env.VCAP_SERVICES != null ? process.env.VCAP_SERVICES : JSON.parse('{ }');
