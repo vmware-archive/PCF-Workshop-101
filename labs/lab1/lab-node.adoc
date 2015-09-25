@@ -23,7 +23,7 @@ Follow the prompts
 . Change to the _nodejs-cf-sample-ap_ sample application directory:
 +
 ----
-$ cd $BOOTCAMP_HOME/nodejs-cf-sample-ap
+$ cd $BOOTCAMP_HOME/nodejs-cf-sample-app
 ----
 
 . Push the application!
