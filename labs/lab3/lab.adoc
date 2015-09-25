@@ -8,7 +8,7 @@ In the next two labs we'll explore Pivotal Cloudfoundry operations.
 
 == Scale the Application Up
 
-. Now let's increase the number of running application instances to 3:
+. Now let's increase the number of running application instances to 3.  For this lab you can use the Java, Ruby, or Node.js sample app.  In each of the commands below replace _workshop_ with the name of your deployed application:
 +
 ----
 $ cf scale -i 3 workshop
@@ -46,7 +46,7 @@ buildpack: java-buildpack=v3.0-offline-https://github.com/cloudfoundry/java-buil
 . Eventually all instances will converge to a running state:
 +
 ----
-$ cf app workshop[]
+$ cf app workshop
 Showing health and status for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
@@ -117,6 +117,19 @@ The first is available via the CLI. Just type:
 
 ----
 $ cf app workshop
+Showing health and status for app workshop in org TELCO / space zwickey as azwickey@pivotal.io...
+OK
+
+requested state: started
+instances: 3/3
+usage: 512M x 3 instances
+urls: workshop-leishmanial-preobligation.vert.fe.gopivotal.com
+last uploaded: Fri Sep 25 15:07:25 UTC 2015
+stack: cflinuxfs2
+buildpack: java-buildpack=v3.1.1-offline-https://github.com/cloudfoundry/java-buildpack#7a538fb java-main java-opts open-jdk-like-jre=1.8.0_51 open-jdk-like-memory-calculator=1.1.1_RELEASE spring-auto-reconfiguration=1.7.0_RELEASE
+
+     state     since                    cpu    memory           disk           details
+#0   running   2015-09-25 11:11:33 AM   0.1%   411.6M of 512M   151.6M of 1G
 ----
 
 and you'll see the list of routes in the section that says _urls_.
@@ -151,7 +164,7 @@ image::blue-green.png[]
 +
 ====
 ----
-$ cf files workshop /
+$ cf files workshop
 Getting files for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
@@ -164,7 +177,7 @@ run.pid                                     3B
 staging_info.yml                          1.1K
 tmp/
 
-$ cf files workshop /app    <1>
+$ cf files workshop app/    <1>
 Getting files for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
@@ -179,7 +192,7 @@ resources/                                   -                                  
 . We can also retrieve the contents of a file using the same command if the path supplied is a path to a file:
 +
 ----
-$ cf files workshop /staging_info.yml
+$ cf files workshop staging_info.yml
 Getting files for app workshop in org TELCO / space gammon as jtgammon@pivotal.io...
 OK
 
