@@ -4,19 +4,18 @@
 
 This one day hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
 
-8:30 AM - 9:00:: Registration and Breakfast
-9:00 AM - 10:45 AM::
-* Session 1: _Welcome to the Cloud Native Enterprise_ 
-* Demo: Ops Manager, Pushing your first app, Apps Manager
-10:30 AM - 10:45 AM:: Break
-10:45 AM - 12:15 PM:: 
+12:30 PM - 1:00 PM::
+ * Session 1: _Welcome to the Cloud Native Enterprise_ 
+1:00 PM - 1:30 PM::
+ * Demo: Pushing your first app, Apps Manager, Ops Manager_
+1:30 PM - 1:45 PM:: Break
+1:45 PM - 3:00 PM:: 
 * Session 2: _Pivotal Cloud Foundry Architecture and Containers_
 * Session 2: _Pivotal Cloud Foundry for Operators_
-12:15 PM - 1:00 PM:: Lunch
-1:00 PM - 1:45 PM:: 
+3:00 PM - 3:15 PM:: Break
+3:15 PM - 3:30 PM:: 
 * Session 3: _Pivotal Cloud Foundry Services_
-1:45 AM - 2:00 PM:: Break
-2:00 PM - 4:00 PM:: 
+3:30 PM - 5:30 PM:: 
 * Labs - Push, Scale, Bind, Monitor and Integrate your app
 
 == Course Materials
@@ -27,9 +26,12 @@ This one day hands-on classroom style session will provide developers (and opera
 
 
 * Developer Workshop
-** link:labs/lab1/lab.adoc[Lab 1 - From Zero to Pushing Your First Application]
+** Lab 1 - From Zero to Pushing Your First Application
+*** link:labs/lab1/lab.adoc[**Java** Application]
+*** link:labs/lab1/lab-ruby.adoc[**Ruby** Application]
+*** link:labs/lab1/lab-node.adoc[**NodeJS** Application]
 ** link:labs/lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
 ** link:labs/lab3/lab.adoc[Lab 3 - Operating Your Application]
 ** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
-** link:labs/lab5/continuous-delivery-lab.adoc[Lab 5 - Jenkins Integration]
-** link:cf-spring-trader/README.md[Lab 6 - Spring Cloud Services]
+** link:labs/lab5/continuous-delivery-lab.adoc[Advanced Lab - Jenkins Integration]
+** link:cf-spring-trader/README.md[Advanced Lab - Spring Cloud Services, _**Java** Only_]
