@@ -414,6 +414,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Lab 5 - Deploying a .NET Application</h1>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
 <div class="paragraph">
@@ -425,9 +427,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </blockquote>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites">Prerequisites</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A working PCF 1.6 or 1.5 + Diego Beta deployment. This PCF deployment must have a Windows cell installed and operational&#8201;&#8212;&#8201;see <a href="https://github.com/cloudfoundry-incubator/diego-windows-release/blob/master/docs/INSTALL.md">the Diego Windows release notes</a> for additional details on setup of a Windows cell if your PCF environment needs one.</p>
+</li>
+<li>
+<p>A SQL Server 2012 or 2014 instance with a database created.  This SQL Server database must be accessible (routeable) from your PCF environment. For demonstration purposes, we created a VM running SQL Server 2012 Express on vSphere with 2 vCPUs, 8GB RAM, and 50GB disk using Windows 2012R2.  If you are creating a new SQL Server instance on your own IaaS / hardware, follow <a href="http://www.sqlservercentral.com/blogs/basits-sql-server-tips/2012/06/23/sql-server-2012-installation-guide/">this guide</a> to install from <a href="http://www.microsoft.com/en-us/download/details.aspx?id=29062">Microsoft&#8217;s download website</a>.  As an alternative option, you can create and utilize a SQL Server instance in the cloud using <a href="https://azure.microsoft.com/en-us/services/sql-database/">Microsoft Azure</a>. As of October 2015, Microsoft is offering a free one month trial of Azure.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-24 19:14:49 CDT
+Last updated 2015-10-24 19:58:11 CDT
 </div>
 </div>
 </body>
