@@ -422,7 +422,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>With the release of Pivotal Cloud Foundry 1.6, it is now possible to deploy and manage .NET applications within your PCF environment.</p>
 </div>
 <div class="paragraph">
-<p>In the this lab, we will deploy a .NET application backed by a SQL Server instance using a Blue-Green approach.</p>
+<p>In the this lab, we will deploy a .NET application backed by a SQL Server instance.  There are two versions of the Contoso application in this repo: V1 has a black background on the home page, and V2 has a green background: this is to show a 'Blue-Green' deployment scenario.</p>
 </div>
 </blockquote>
 </div>
@@ -439,14 +439,161 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>A SQL Server 2012 or 2014 instance with a database created.  This SQL Server database must be accessible (routeable) from your PCF environment. For demonstration purposes, we created a VM running SQL Server 2012 Express on vSphere with 2 vCPUs, 8GB RAM, and 50GB disk using Windows 2012R2.  If you are creating a new SQL Server instance on your own IaaS / hardware, follow <a href="http://www.sqlservercentral.com/blogs/basits-sql-server-tips/2012/06/23/sql-server-2012-installation-guide/">this guide</a> to install from <a href="http://www.microsoft.com/en-us/download/details.aspx?id=29062">Microsoft&#8217;s download website</a>.  As an alternative option, you can create and utilize a SQL Server instance in the cloud using <a href="https://azure.microsoft.com/en-us/services/sql-database/">Microsoft Azure</a>. As of October 2015, Microsoft is offering a free one month trial of Azure.</p>
 </li>
+<li>
+<p>Submodules initiated and fetched for this workshop git repository. After cloning this repository, issue this command to download the .NET code used by this lab.</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd PCF-Workshop-101/
+$ git submodule init &amp;&amp; git submodule update</pre>
+</div>
+</div>
+</li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_the_user_provided_service">Create the User Provided Service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Contoso .NET application depends on a SQL Server instance and optionally a queue.  For this demo, we will create two services however only use the SQL Server service instance. This will be made available to the .NET application via a User Provided Service binding in Cloud Foundry.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The first service is a connection to an SQL server:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ cf cups contoso-demo-sql -p 'connectionString'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enter your SQL Server connection string (the SQL Server database can be hosted anywhere, e.g. on Azure). Replace the following parameters with the appropriate values: YOUR_IP, YOUR_USERID, YOUR_PASSWORD, YOUR_DATABASE</p>
+<div class="literalblock">
+<div class="content">
+<pre>Data Source=YOUR_IP;Integrated Security=False;User ID=YOUR_USERID;Password=YOUR_PASSWORD;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=YOUR_DATABASE</pre>
+</div>
+</div>
+</li>
+<li>
+<p>The second service is to an Azure Service Bus queue:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ cf cups contoso-demo-queue -p 'queueConnectionString'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>The command line will then prompt you for the queue connection string with the prompt <code>queueConnectionString:</code>, and you can enter the information as follows. Replace the following parameters with the appropriate values: YOUR_QUEUE_HOST, YOUR_QUEUE_NAME, YOUR_QUEUE_KEY. For the demo, you can use placeholder values as we will not utilize this.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Endpoint=sb://YOUR_QUEUE_HOST;SharedAccessKeyName=YOUR_QUEUE_NAME;SharedAccessKey=YOUR_QUEUE_KEY</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_the_net_application">Deploy the .NET Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the following commands to deploy to Pivotal Cloud Foundry after you have created the User Provided Servies in the previous step.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the directory containing the .NET app</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd cf-dotnetcontoso</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit the file contoso-university-v1/demo.bat and replace YOUR_DOMAIN with the domain in use by application in your instance of Cloud Foundry.</p>
+</li>
+<li>
+<p>Deploy</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>On Linux:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd contoso-university-v1
+$ bash demo1.bat</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd ../contoso-university-v2
+$ bash demo2.bat</pre>
+</div>
+</div>
+</li>
+<li>
+<p>On Windows:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd contoso-university-v1
+$ demo1.bat</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd ../contoso-university-v2
+$ demo2.bat</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_view_the_two_versions_of_the_application">View the Two Versions of the Application</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Pull up the Application Manager dashboard.</p>
+</li>
+<li>
+<p>Click on the contoso-demo-v1 URL. This is the Blue deploy and has a black background on the homepage. Note that it has also been mapped to a second route named 'contoso.YOUR_DOMAIN'  Feel free to add some Students, Instructors, etc.</p>
+</li>
+<li>
+<p>Click on the contoso-demo-v2 URL. This is the Green deploy and has a green background on the homepage. It utilizes the same SQL Server database (via the User Provided Service binding) so note that all of the values you entered in the previous step show up here too - very cool!</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_blue_green_deploy">Blue-Green Deploy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Foundry makes it very simple to perform Blue-Green deployments. Simply map the same route to a different version of your applicaiton which has been deployed. Cloud Foundry will automatically load balance between the two different applications, enabling zero-downtime and allowing for a seamless transition between application versions.  Replace YORU_DOMAIN with the appropriate value below to map the second version of Contoso (the green background) to the same route as the first version of Contoso (the black background). Voila!</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ cf map-route contoso-demo-v2 YOUR_DOMAIN -n contoso</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure you open the Contoso application in a Chrome incognito window so that sticky sessions do not cause any issues. Then, refresh and note the color changing. Also browse the various tabs and see that V2 of the application is using the same SQL Server database that V1 utilized.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-10-24 19:58:11 CDT
+Last updated 2015-10-24 20:50:54 CDT
 </div>
 </div>
 </body>
