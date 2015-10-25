@@ -33,5 +33,6 @@ This one day hands-on classroom style session will provide developers (and opera
 ** link:labs/lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
 ** link:labs/lab3/lab.adoc[Lab 3 - Operating Your Application]
 ** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
-** link:labs/lab5/continuous-delivery-lab.adoc[Advanced Lab - Jenkins Integration]
+** link:labs/lab5/lab.adoc[Advanced Lab - Deploying a .NET Application]
 ** link:cf-spring-trader/README.md[Advanced Lab - Spring Cloud Services, _**Java** Only_]
+** link:labs/lab5/continuous-delivery-lab.adoc[Advanced Lab - Jenkins Integration]
