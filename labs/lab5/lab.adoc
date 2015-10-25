@@ -76,7 +76,7 @@ Use the following commands to deploy to Pivotal Cloud Foundry after you have cre
 
 == Blue-Green Deploy
 
-Cloud Foundry makes it very simple to perform Blue-Green deployments. Simply map the same route to a different version of your applicaiton which has been deployed. Cloud Foundry will automatically load balance between the two different applications, enabling zero-downtime and allowing for a seamless transition between application versions.  Replace YORU_DOMAIN with the appropriate value below to map the second version of Contoso (the green background) to the same route as the first version of Contoso (the black background). Voila!
+Cloud Foundry makes it very simple to perform Blue-Green deployments. Simply map the same route to a different version of your applicaiton which has been deployed. Cloud Foundry will automatically load balance between the two different applications, enabling zero-downtime and allowing for a seamless transition between application versions.  Replace YOUR_DOMAIN with the appropriate value below to map the second version of Contoso (the green background) to the same route as the first version of Contoso (the black background). Voila!
 
  $ cf map-route contoso-demo-v2 YOUR_DOMAIN -n contoso
 
