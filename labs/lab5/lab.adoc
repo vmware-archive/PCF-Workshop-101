@@ -1,0 +1,9 @@
+= Lab 5 - Deploying a .NET Application
+
+[abstract]
+--
+With the release of Pivotal Cloud Foundry 1.6, it is now possible to deploy and manage .NET applications within your PCF environment. 
+
+In the this lab, we will deploy a .NET application backed by a SQL Server instance using a Blue-Green approach.
+--
+
