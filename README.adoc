@@ -9,27 +9,27 @@ This workshop will provide developers and operators an indepth overview of Pivot
 10:00 AM - 11:00 AM:: Transforming into Cloud Native (Mark Ruesink, Pivotal CTO)
 11:00 AM - 12:00 PM:: Pivotal Cloud Foundry & .NET – Integrations and Roadmap (Mike Dalessio, Pivotal)
 
-                      Call to Action after the Workshop (Antonio Melo, Humana)
+Call to Action after the Workshop (Antonio Melo, Humana)
 
 12:00 PM - 1:00 PM::  Lunch Break and Split into Separate Tracks (Developer & Operator)
 
-Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team, Pivotal)
-
-  1:00 PM - 4:30 PM::   Developer Focused Workshop Labs:
+==Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team, Pivotal)
+==1:00 PM - 4:30 PM::   Developer Focused Workshop Labs:
   
   * Session 1: _Welcome to the Cloud Native Enterprise_ 
   * Demo: Pushing your first app, Apps Manager, Ops Manager_
   * Session 2: _Pivotal Cloud Foundry Architecture and Containers_
   * Labs - Push, Scale, Bind, Monitor and Integrate your app
 
-Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Mark Ruesink & Aaron Fortener, Pivotal)
 
-  1:00 PM - 4:30 PM::  Operator Focused Workshop
+==Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Mark Ruesink & Aaron Fortener, Pivotal)
+==1:00 PM - 4:30 PM::  Operator Focused Workshop
   
   * Transforming to Cloud Native: Why?, What?, How?
   * Pivotal Cloud Foundry Overview
   * PCF Demo: Application Push Example
   * Operations Key Role with Pivotal Cloud Foundry
+
 
 == Developer Track Course Materials
 
