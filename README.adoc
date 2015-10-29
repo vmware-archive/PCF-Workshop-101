@@ -18,10 +18,10 @@ Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team
 
 1:00 PM - 4:30 PM::   Developer Focused Workshop Labs:
   
-  * Session 1: _Welcome to the Cloud Native Enterprise_ 
-  * Demo: Pushing your first app, Apps Manager, Ops Manager_
-  * Session 2: _Pivotal Cloud Foundry Architecture and Containers_
-  * Labs - Push, Scale, Bind, Monitor your app
+  * Session 1: _Welcome to the Cloud Native Enterprise 
+  * Demo: Pushing your first app, Apps Manager, Ops Manager
+  * Session 2: _Pivotal Cloud Foundry Architecture and Containers
+  * Labs - Push, Scale, Bind, Monitor your App
 
 
 Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivotal FE)
