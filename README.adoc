@@ -1,10 +1,17 @@
-= Pivotal Cloud Foundry 101 Workshop @ Humana
+= Pivotal Cloud Foundry Workshop @ Humana
 
 == Schedule
 
-This one day hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
+This classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
 
-12:30 PM - 1:00 PM::
+8:30 AM - 9:00 AM::   Registration & Breakfast
+9:00 AM - 10:00 AM::  Welcome & Keynote (Transformation & Business Trends)
+10:00 AM - 11:00 AM:: Transforming into Cloud Native (Mark Ruesink, Pivotal CTO)
+11:00 AM - 12:00 PM:: Pivotal Cloud Foundry & .NET – Integrations and Roadmap (Mike Dalessio, Pivotal)
+                      Call to Action after the Workshop (Antonio Melo, Humana)
+12:00 PM - 1:00 PM::  Lunch Break and Split into Separate Tracks
+                      Developer & Operator Tracks
+                      
  * Session 1: _Welcome to the Cloud Native Enterprise_ 
 1:00 PM - 1:30 PM::
  * Demo: Pushing your first app, Apps Manager, Ops Manager_
