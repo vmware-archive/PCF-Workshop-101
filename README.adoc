@@ -14,6 +14,7 @@ This workshop will provide developers and operators an indepth overview of Pivot
 12:00 PM - 1:00 PM::  Lunch Break and Split into Separate Tracks (Developer & Operator)
 
 Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team, Pivotal)
+
 1:00 PM - 4:30 PM::   Developer Focused Workshop Labs:
   
   * Session 1: _Welcome to the Cloud Native Enterprise_ 
@@ -23,6 +24,7 @@ Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team
 
 
 Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Mark Ruesink & Aaron Fortener, Pivotal)
+
 1:00 PM - 4:30 PM::  Operator Focused Workshop
   
   * Transforming to Cloud Native: Why?, What?, How?
