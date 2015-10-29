@@ -14,14 +14,18 @@ This workshop will provide developers and operators an indepth overview of Pivot
 12:00 PM - 1:00 PM::  Lunch Break and Split into Separate Tracks (Developer & Operator)
 
 Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team, Pivotal)
+
   1:00 PM - 4:30 PM::   Developer focused Workshop Labs:
+  
   * Session 1: _Welcome to the Cloud Native Enterprise_ 
   * Demo: Pushing your first app, Apps Manager, Ops Manager_
   * Session 2: _Pivotal Cloud Foundry Architecture and Containers_
   * Labs - Push, Scale, Bind, Monitor and Integrate your app
 
 Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Mark Ruesink & Aaron Fortener, Pivotal)
+
   1:00 PM - 4:30 PM::
+  
   * Transforming to Cloud Native: Why?, What?, How?
   * Pivotal Cloud Foundry Overview
   * PCF Demo: Application Push Example
