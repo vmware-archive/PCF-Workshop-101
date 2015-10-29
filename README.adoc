@@ -8,9 +8,21 @@ This classroom style session will provide developers (and operators) with hands 
 9:00 AM - 10:00 AM::  Welcome & Keynote (Transformation & Business Trends)
 10:00 AM - 11:00 AM:: Transforming into Cloud Native (Mark Ruesink, Pivotal CTO)
 11:00 AM - 12:00 PM:: Pivotal Cloud Foundry & .NET – Integrations and Roadmap (Mike Dalessio, Pivotal)
+
                       Call to Action after the Workshop (Antonio Melo, Humana)
 12:00 PM - 1:00 PM::  Lunch Break and Split into Separate Tracks
-                      Developer & Operator Tracks
+
+                      (Developer & Operator Tracks)
+
+Track 1:  Developer Hands On Workshop: (Mike Dalessio & Team, Pivotal)
+
+1:00 PM - 1:30 PM::   Pushing Code with Pivotal Cloud Foundry
+1:30 PM - 4:30 PM::   Developer focused Workshop Labs:
+
+Track 2:  Operators: (Mark Ruesink & Aaron Fortener, Pivotal)
+
+1:00 PM - 1:30 PM::   Impact of a Platform as a Service (Mark Ruesink, Pivotal CTO)
+1:30 PM - 4:30 PM::   Pivotal Cloud Foundry for Operators Demonstration (Aaron Fortener, Pivotal FE)
                       
  * Session 1: _Welcome to the Cloud Native Enterprise_ 
 1:00 PM - 1:30 PM::
