@@ -51,6 +51,6 @@ Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivot
 ** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
 
 == Operator Track Course Materials
-* Session Presentation: link:presentations/PCF_Overview_and_Ops_Workshop_Humana110415.pptx[Operator Focused Presentation]
+* Session Presentation: link:presentations/PCF_Overview_and_Ops_Workshop_Humana110415.pptx[Pivotal Cloud Foundry Operator Focused Session/Presentation]
 ** Lab 1 - From Zero to Pushing Your First Application
 *** link:labs/lab5/lab.adoc[**.NET** Application]
