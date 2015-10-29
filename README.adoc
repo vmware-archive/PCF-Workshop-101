@@ -1,4 +1,4 @@
-= Pivotal Cloud Foundry 101 Workshop
+= Pivotal Cloud Foundry 101 Workshop @ Humana
 
 == Schedule
 
