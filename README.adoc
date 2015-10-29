@@ -21,7 +21,7 @@ Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team
   * Session 1: _Welcome to the Cloud Native Enterprise_ 
   * Demo: Pushing your first app, Apps Manager, Ops Manager_
   * Session 2: _Pivotal Cloud Foundry Architecture and Containers_
-  * Labs - Push, Scale, Bind, Monitor and Integrate your app
+  * Labs - Push, Scale, Bind, Monitor your app
 
 
 Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivotal FE)
@@ -51,3 +51,6 @@ Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivot
 ** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
 
 == Operator Track Course Materials
+* Session Presentation: link:presentations/PCF_Overview_and_Ops_Workshop_Humana110415.pptx[Operator Focused Presentation]
+** Lab 1 - From Zero to Pushing Your First Application
+*** link:labs/lab5/lab.adoc[**.NET** Application]
