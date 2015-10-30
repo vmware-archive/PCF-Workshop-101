@@ -12,14 +12,14 @@ This workshop will provide developers and operators an indepth overview of Pivot
 
 12:15 PM - 12:45 PM:: Lunch Break and Split into Separate Tracks (Developer & Operator)
 
-Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team, Pivotal)
+== Track 1:  Developer Track: Pivotal Cloud Foundry Workshop:
 
 12:45 PM - 4:30 PM::   Developer Focused Workshop Labs:
   * Bring your own app and push to Cloud Foundry
 
   * Q&A and Next Steps (4:30 PM - 5:00 PM)
 
-Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivotal FE)
+== Track 2:  Operators Track: Pivotal Cloud Foundry Workshop
 
 12:45 PM - 3:30 PM::  Operator Focused Workshop
   
