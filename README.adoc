@@ -30,7 +30,7 @@ Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivot
 
   * Q&A and Next Steps (3:30 PM - 4:00 PM)  
 
-* Workshop Material
+== Workshop Material
 ** Lab 1 - From Zero to Pushing Your First Application
 *** link:labs/lab5/lab.adoc[**.NET** Application]
 *** link:labs/lab1/lab.adoc[**Java** Application]
