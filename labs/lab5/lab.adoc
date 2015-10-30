@@ -9,7 +9,7 @@ In the this lab, we will deploy a .NET application backed by a SQL Server instan
 
 == Prerequisites 
 
-. A working PCF 1.6 or 1.5 + Diego Beta deployment. This PCF deployment must have a Windows cell installed and operational -- see https://github.com/cloudfoundry-incubator/diego-windows-release/blob/master/docs/INSTALL.md[the Diego Windows release notes] for additional details on setup of a Windows cell if your PCF environment needs one.
+. A working PCF 1.6. This PCF deployment must have a Windows cell installed and operational -- see https://github.com/cloudfoundry-incubator/diego-windows-release/blob/master/docs/INSTALL.md[the Diego Windows release notes] for additional details on setup of a Windows cell if your PCF environment needs one.
 
 . A SQL Server 2012 or 2014 instance with a database created.  This SQL Server database must be accessible (routeable) from your PCF environment. For demonstration purposes, we created a VM running SQL Server 2012 Express on vSphere with 2 vCPUs, 8GB RAM, and 50GB disk using Windows 2012R2.  If you are creating a new SQL Server instance on your own IaaS / hardware, follow http://www.sqlservercentral.com/blogs/basits-sql-server-tips/2012/06/23/sql-server-2012-installation-guide/[this guide] to install from http://www.microsoft.com/en-us/download/details.aspx?id=29062[Microsoft's download website].  As an alternative option, you can create and utilize a SQL Server instance in the cloud using https://azure.microsoft.com/en-us/services/sql-database/[Microsoft Azure]. As of October 2015, Microsoft is offering a free one month trial of Azure.
 
