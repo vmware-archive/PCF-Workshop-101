@@ -5,7 +5,7 @@
 This workshop will provide developers and operators an indepth overview of Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
 
 8:00 AM - 9:00 AM::   Registration & Breakfast
-9:00 AM - 10:00 AM::  Welcome & Keynote: Cloud Native for Enterprise | Rapidly deliver continuous value to Humana's consumers
+9:00 AM - 10:00 AM::  Keynote: Cloud Native for Enterprise | Rapidly deliver continuous value to Humana's consumers
 10:00 AM - 11:00 AM:: Cloud Native Defined (Mark Ruesink, Pivotal CTO)
 11:00 AM - 11:15 AM:: Break
 11:15 AM - 12:15 PM:: Pushing Code with Pivotal Cloud Foundry
