@@ -16,8 +16,8 @@ Track 1:  Developer Track: Pivotal Cloud Foundry Workshop: (Mike Dalessio & Team
 
 12:45 PM - 4:30 PM::   Developer Focused Workshop Labs:
   * Bring your own app and push to Cloud Foundry
-4:30 PM - 5:00 PM
-  * Q&A and Next Steps
+
+  * Q&A and Next Steps (4:30 PM - 5:00 PM)
 
 Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivotal FE)
 
@@ -27,8 +27,8 @@ Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivot
   * Pivotal Cloud Foundry Overview
   * Operations Key Role with Pivotal Cloud Foundry
   * Pivotal Cloud Foundry for Operators Demonstration: (Ops Manager/Apps Manager)
-3:30 PM - 4:00 PM
-  * Q&A and Next Steps  
+
+  * Q&A and Next Steps (3:30 PM - 4:00 PM)  
 
 * Workshop Material
 ** Lab 1 - From Zero to Pushing Your First Application
@@ -36,15 +36,16 @@ Track 2:  Operators Track: Pivotal Cloud Foundry Workshop (Aaron Fortener, Pivot
 *** link:labs/lab1/lab.adoc[**Java** Application]
 *** link:labs/lab1/lab-ruby.adoc[**Ruby** Application]
 *** link:labs/lab1/lab-node.adoc[**NodeJS** Application]
-** link:labs/lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
-** link:labs/lab3/lab.adoc[Lab 3 - Operating Your Application]
-** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
+
 
 == Additional Developer Track Course Materials
 
 * Session 1: link:presentations/Session_1_Cloud_Native_Enterprise.pptx[Welcome to the Cloud Native Enterprise]
 * Session 2: link:presentations/Session_2_Architecture_And_Operations.pptx[Pivotal Cloud Foundry Architecture and Operations]
 * Session 3: link:presentations/Session_3_Services_Overview.pptx[Pivotal Cloud Foundry Services]
+** link:labs/lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
+** link:labs/lab3/lab.adoc[Lab 3 - Operating Your Application]
+** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
 
 ==  Additional Operator Track Course Materials
 * Session Presentation: link:presentations/PCF_Overview_and_Ops_Workshop_Humana110415.pptx[Pivotal Cloud Foundry Operator Focused Session/Presentation]
