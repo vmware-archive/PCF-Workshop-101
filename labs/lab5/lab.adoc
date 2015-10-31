@@ -2,7 +2,7 @@
 
 [abstract]
 --
-In this lab we will push a .NET application to cloud foundry.
+In this lab we will push a .NET web application to cloud foundry.
 --
 
 = Lab - From Zero to Pushing Your First Application
