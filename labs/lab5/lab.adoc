@@ -2,10 +2,10 @@
 
 [abstract]
 --
-In this lab we will push a .NET app to cloud foundry.
+In this lab we will push a .NET application to cloud foundry.
 --
 
-= Lab 1 - From Zero to Pushing Your First Application
+= Lab - From Zero to Pushing Your First Application
 
 == Target
 
@@ -23,14 +23,14 @@ $ cf api https://api.run.poc-cf.loutms.tree --skip-ssl-validation
 $ cf login
 ----
 +
-Follow the prompts
+Follow the prompts.  You should have a welcome card with your username and password on it.  If you didn't get one, please ask.
 
 == Push It!
 
-. Change to the _cf-spring-mvc-boot_ sample application directory:
+. Change to the _ViewEnvironmentt_ application directory (this is the folder containing the code files and manifest.yml):
 +
 ----
-$ cd $BOOTCAMP_HOME/cf-spring-mvc-boot
+$ cd $ProjectHome/ViewEnvironment
 ----
 
 . Push the application!
@@ -43,73 +43,86 @@ You should see output similar to the following listing. Take a look at the listi
 +
 ====
 ----
-Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/manifest.yml <1>
+$ cf push
+Using manifest file manifest.yml
 
-Creating app workshop in org TELCO / space hopper as phopper@pivotal.io...
-OK <2>
-
-Creating route workshop-philologic-catchpolery.vert.fe.gopivotal.com...
-OK <3>
-
-Binding workshop-philologic-catchpolery.vert.fe.gopivotal.com to workshop...
-OK <4>
-
-Uploading workshop... <5>
-Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/target/cf-spring-mvc-boot-0.0.1-SNAPSHOT.jar
-Uploading 10.6M, 153 files
-Done uploading               
+Using stack windows2012R2...
+OK
+Updating app env in org fortener / space development as admin...
 OK
 
-Starting app workshop in org TELCO / space hopper as phopper@pivotal.io... <6>
------> Downloaded app package (27M)
------> Java Buildpack Version: v3.1.1 (offline) | https://github.com/cloudfoundry/java-buildpack#7a538fb
------> Downloading Open Jdk JRE 1.8.0_51 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_51.tar.gz (found in cache)
-       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.5s) <7>
------> Downloading Open JDK Like Memory Calculator 1.1.1_RELEASE from https://download.run.pivotal.io/memory-calculator/trusty/x86_64/memory-calculator-1.1.1_RELEASE (found in cache)
-       Memory Settings: -Xss995K -Xmx382293K -Xms382293K -XX:MaxMetaspaceSize=64M -XX:MetaspaceSize=64M
------> Downloading Spring Auto Reconfiguration 1.7.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.7.0_RELEASE.jar (found in cache)
+Creating route env-interloan-impalement.run.vca.410er.com...
+OK
 
------> Uploading droplet (72M) <8>
+Binding env-interloan-impalement.run.vca.410er.com to env...
+OK
 
-0 of 1 instances running, 1 starting
+Uploading env...
+Uploading app files from: /ViewEnvironment
+Uploading 241.6K, 34 files
+Done uploading
+OK
+
+Stopping app env in org fortener / space development as admin...
+OK
+
+Starting app env in org fortener / space development as admin...
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (334K)
+Downloading buildpacks (binary_buildpack)...
+Downloading binary_buildpack...
+Downloaded binary_buildpack
+Downloaded buildpacks
+Staging...
+Exit status 0
+Staging complete
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded droplet (322.6K)
+Uploading complete
+
 0 of 1 instances running, 1 starting
 1 of 1 instances running
 
 App started
 
+
 OK
 
-App workshop was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-1.1.1_RELEASE -memorySizes=metaspace:64m.. -memoryWeights=heap:75,metaspace:10,stack:5,native:10 -totMemory=$MEMORY_LIMIT) && SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.7.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY -Djava.security.egd=file:///dev/urandom org.springframework.boot.loader.JarLauncher` <9>
+App env was started using this command `..\tmp\lifecycle\WebAppServer.exe`
 
-Showing health and status for app workshop in org TELCO / space hopper as phopper@pivotal.io... <10>
+Showing health and status for app env in org fortener / space development as admin...
 OK
 
 requested state: started
 instances: 1/1
 usage: 512M x 1 instances
-urls: workshop-philologic-catchpolery.vert.fe.gopivotal.com
-last uploaded: Thu Sep 24 20:15:27 UTC 2015
-stack: cflinuxfs2
-buildpack: java-buildpack=v3.1.1-offline-https://github.com/cloudfoundry/java-buildpack#7a538fb java-main java-opts open-jdk-like-jre=1.8.0_51 open-jdk-like-memory-calculator=1.1.1_RELEASE spring-auto-reconfiguration=1.7.0_RELEASE
+urls: env-unwrestled-grot.run.vca.410er.com, env-nonaddicting-acicularity.run.vca.410er.com, env-interloan-impalement.run.vca.410er.com
+last uploaded: Sat Oct 31 01:17:15 UTC 2015
+stack: windows2012R2
 
-     state     since                    cpu    memory           disk           details   
-#0   running   2015-09-24 02:16:11 PM   2.4%   392.6M of 512M   151.6M of 1G 
+     state     since                    cpu    memory           disk          details
+#0   running   2015-10-30 09:18:03 PM   0.0%   102.6M of 512M   14.8M of 1G
+
+$
 ----
-<1> The CLI is using a manifest to provide necessary configuration details such as application name, memory to be allocated, and path to the application artifact.
+<1> The CLI is using a manifest to provide necessary configuration details such as application name, memory to be allocated, the stack to be used (in this case Windows2012R2), the number of instances requested to start, and path to the application artifact.
 Take a look at `manifest.yml` to see how.
 <2> In most cases, the CLI indicates each Cloud Foundry API call as it happens.
-In this case, the CLI has created an application record for _Workshop_ in your assigned space.
+In this case, the CLI has created an application record for _env_ in your assigned space.
 <3> All HTTP/HTTPS requests to applications will flow through Cloud Foundry's front-end router called http://docs.cloudfoundry.org/concepts/architecture/router.html[(Go)Router].
-Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `devcloudwest.inbcu.com` domain.
+Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `app.poc-cf.loutms.tree` domain.
 <4> Now the CLI is _binding_ the created route to the application.
 Routes can actually be bound to multiple applications to support techniques such as http://www.mattstine.com/2013/07/10/blue-green-deployments-on-cloudfoundry[blue-green deployments].
-<5> The CLI finally uploads the application bits to Pivotal Cloudfoundry. Notice that it's uploading _75 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes.
-<6> Now we begin the staging process. The https://github.com/cloudfoundry/java-buildpack[Java Buildpack] is responsible for assembling the runtime components necessary to run the application.
-<7> Here we see the version of the JRE that has been chosen and installed.
-<8> The complete package of your application and all of its necessary runtime components is called a _droplet_.
-Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Droplet Execution Agents (DEA's)]_ for execution.
-<9> The CLI tells you exactly what command and argument set was used to start your application.
-<10> Finally the CLI reports the current status of your application's health.
+<5> The CLI finally uploads the application bits to Pivotal Cloud Foundry. Notice that it's uploading _34 files_! This is because Cloud Foundry actually uploads all the files for the deployment for caching purposes.
+<6> Now we begin the staging process. By choosing the Windows2012R2 stack a container is created on the runtime to prepare the application to run, a second container is then generated that will host your application...in this case using the WebAppServer process in Windows.  If you were continue on to the other language labs you can push an application on the Linux stack, this step gets replaced with the steps appropriate for the application being run.
+<7> The complete package of your application and all of its necessary runtime components is called a _droplet_.
+Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Cells]_ for execution.
+<8> The CLI tells you exactly what command and argument set was used to start your application.
+<9> Finally the CLI reports the current status of your application's health.
 ====
 
 . Visit the application in your browser by hitting the route that was generated by the CLI:
