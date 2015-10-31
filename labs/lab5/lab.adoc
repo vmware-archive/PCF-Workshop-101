@@ -139,16 +139,16 @@ $ cf apps
 +
 Note the application name for next steps
 
-. Get information about running instances, memory, CPU, and other statistics using CLI instances command
-+
-----
-$ cf app env
-----
-
 . Scale the app to 2 instances
 +
 ----
 $ cf scale env -i 2
+----
+
+. Get information about running instances, memory, CPU, and other statistics using CLI instances command
++
+----
+$ cf app env
 ----
 
 . Stop the deployed application using the CLI
