@@ -142,17 +142,23 @@ Note the application name for next steps
 . Get information about running instances, memory, CPU, and other statistics using CLI instances command
 +
 ----
-$ cf app <<app_name>>
+$ cf app env
+----
+
+. Scale the app to 2 instances
++
+----
+$ cf scale env -i 2
 ----
 
 . Stop the deployed application using the CLI
 +
 ----
-$ cf stop <<app_name>>
+$ cf stop env
 ----
 
 . Delete the deployed application using the CLI
 +
 ----
-$ cf delete <<app_name>>
+$ cf delete env
 ----
