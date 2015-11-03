@@ -65,7 +65,7 @@ OK
 
 Uploading env...
 Uploading app files from: /ViewEnvironment
-Uploading 241.6K, 34 files
+Uploading 241.6K, 39 files
 Done uploading
 OK
 
