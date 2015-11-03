@@ -11,7 +11,7 @@ In this lab we will push a .NET web application to cloud foundry.
 
 . If you haven't already, download the latest release of the Cloud Foundry command line interface  (CLI) from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
 
-. Download the cloning the git repo if you have the command line tool installed, if not just click 'Download ZIP' on the right side of the page https://github.com/Pivotal-Field-Engineering/pcf-dotnet-environment-viewer[here]
+. Download and clone the git repo if you have the command line tool installed, if not just click 'Download ZIP' on the right side of the page https://github.com/Pivotal-Field-Engineering/pcf-dotnet-environment-viewer[here]
 +
 ----
 $ git clone https://github.com/Pivotal-Field-Engineering/pcf-dotnet-environment-viewer
