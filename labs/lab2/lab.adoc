@@ -1,4 +1,4 @@
-= Lab 2 - Binding to Cloudfoundry Services
+= Lab 2 - Binding to Cloud Foundry Services
 
 [abstract]
 --
