@@ -62,7 +62,7 @@ Here we will see a printout of the environment information.  Take note of what i
 A _restage_ is generally recommended because Cloud Foundry buildpacks also have access to injected environment variables and can install or configure things differently based on their values.]
 +
 ----
-$ cf restage workshop
+$ cf restage env
 ----
 +
 Once the application is running again, revisit or refresh the browser tab where you have the _Wokshop_ application loaded.  You'll notice now we have information that could be used to connect to a DB.
