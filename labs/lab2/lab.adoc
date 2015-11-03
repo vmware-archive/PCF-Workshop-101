@@ -48,7 +48,7 @@ image::lab2.png[]
 
 == Creating and Binding to a Service Instance
 
-. Let's begin by creating a MySQL service instance.
+. Let's begin by creating a SQL Server service instance.
 From the Apps Manager UI service marketplace, select _MySQL for Pivotal Cloudfoundry_, select the free plan, and provide an instance name.
 In the drop-down list next to _Bind to App_ select your workshop application.
 +
