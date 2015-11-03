@@ -106,4 +106,9 @@ You should now see the service created in step 1 listed.
 $ cf services
 ----
 +
+. Now take a look at your app again and refresh, a new section for attendees has become visible and you can interact with the database.
++
+image::lab5.png[]
++
++
 You should now see the service created in step 1 listed and your application listed as a bound app.
