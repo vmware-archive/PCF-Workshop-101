@@ -58,7 +58,7 @@ image::lab3.png[]
 Let's take a look at the environment variables for our application. We can do this by viewing to the homepage of the application.
 Here we will see a printout of the environment information.  Take note of what is contained in the section _Bound Services_.  It's an empty JSON document!
 
-. Now let's _restage_ the application, which cycles our application back through the staging/buildpack process before redeploying the application.footnote:[In this case, we could accomplish the same goal by only _restarting_ the application via `cf restart spring-music`.
+. Now let's _restage_ the application, which cycles our application back through the staging/buildpack process before redeploying the application.footnote:[In this case, we could accomplish the same goal by only _restarting_ the application via `cf restart env`.
 A _restage_ is generally recommended because Cloud Foundry buildpacks also have access to injected environment variables and can install or configure things differently based on their values.]
 +
 ----
@@ -66,32 +66,32 @@ $ cf restage workshop
 ----
 +
 Once the application is running again, revisit or refresh the browser tab where you have the _Wokshop_ application loaded.  You'll notice now we have information that could be used to connect to a DB.
-In fact, our data is now being retrieved from that MySQL database!
+In fact, our data is now being retrieved from that SQL Server database!
 +
 ----
 Bound Services:
-{
-   "p-mysql":[
-      {
-         "name":"adam-db",
-         "label":"p-mysql",
-         "tags":[
-            "mysql",
+ {
+      "mssql-dev": [
+        {
+          "name": "sqlserver",
+          "label": "mssql-dev",
+          "tags": [
+            "mssql",
             "relational"
-         ],
-         "plan":"100mb-dev",
-         "credentials":{
-            "hostname":"10.68.105.55",
-            "port":3306,
-            "name":"cf_226845a3_1982_44ac_92b9_4b149af56bbc",
-            "username":"n67hpBOnKlsPUjKn",
-            "password":"hUa4WSrq2hPtBsuk",
-            "uri":"mysql://n67hpBOnKlsPUjKn:hUa4WSrq2hPtBsuk@10.68.105.55:3306/cf_226845a3_1982_44ac_92b9_4b149af56bbc?reconnect=true",
-            "jdbcUrl":"jdbc:mysql://10.68.105.55:3306/cf_226845a3_1982_44ac_92b9_4b149af56bbc?user=n67hpBOnKlsPUjKn&password=hUa4WSrq2hPtBsuk"
-         }
-      }
-   ]
-}
+          ],
+          "plan": "default",
+          "credentials": {
+            "hostname": "192.168.109.205",
+            "host": "192.168.109.205",
+            "port": 1433,
+            "name": "cf-28e0d150-3fc4-47b5-9779-ebbc49651183",
+            "username": "cf-28e0d150-3fc4-47b5-9779-ebbc49651183-8faf100f-1c0f-4ecb-8789-da060ac2bbb0",
+            "password": "tlOL8YM0BhL2tRJ54BdbtwN0U_SBDtpNC7JRjKq82_M=Aa_0",
+            "connectionString": "Address=192.168.109.205,1433;Database=cf-28e0d150-3fc4-47b5-9779-ebbc49651183;UID=cf-28e0d150-3fc4-47b5-9779-ebbc49651183-8faf100f-1c0f-4ecb-8789-da060ac2bbb0;PWD=tlOL8YM0BhL2tRJ54BdbtwN0U_SBDtpNC7JRjKq82_M=Aa_0;"
+          }
+        }
+      ]
+    }
 ----
 
 . You may also verify your service was provisioned in the Apps Manager UI by clicking on your application and selecting the _Services_ tab.
