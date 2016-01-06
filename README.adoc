@@ -1,28 +1,33 @@
-= Pivotal Cloud Foundry 101 Workshop
+= Pivotal Cloud Foundry 101 Workshop - TMO
 
 == Schedule
 
 This one day hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
 
-12:30 PM - 1:00 PM::
- * Session 1: _Welcome to the Cloud Native Enterprise_ 
-1:00 PM - 1:30 PM::
- * Demo: Pushing your first app, Apps Manager, Ops Manager_
-1:30 PM - 1:45 PM:: Break
-1:45 PM - 3:00 PM:: 
-* Session 2: _Pivotal Cloud Foundry Architecture and Containers_
-* Session 2: _Pivotal Cloud Foundry for Operators_
-3:00 PM - 3:15 PM:: Break
-3:15 PM - 3:30 PM:: 
-* Session 3: _Pivotal Cloud Foundry Services_
-3:30 PM - 5:30 PM:: 
-* Labs - Push, Scale, Bind, Monitor and Integrate your app
+8:00 AM - 8:30 AM::
+ * Registration & Breakfast
+8:30 AM - 9:00 AM::
+ * Keynote (TBD)
+9:00 AM - 10:00 AM::
+ * Session 1: _Introduction_
+10:00 AM - 10:15 AM:: Break
+10:15 AM - 11:15 AM::
+ * Session 2: _PCF Architecture & Operations_
+11:15 AM - 12:15 PM::
+ * Session 3: _Continuous Delivery & Microservices (CN Enterprise)_
+12:15 PM - 12:45 PM:: Lunch
+12:45 PM - 1:30 PM::
+ * Session 4: _Leveraging the Pivotal Cloud Foundry Marketplace_
+1:30 PM - 4:00 PM::
+ * Developer Workshop: _Pushing Code w/PCF_
+4:00 PM - 4:30 PM:: Wrap Up, Q/A, Feedback
 
 == Course Materials
 
-* Session 1: link:presentations/Session_1_Cloud_Native_Enterprise.pptx[Welcome to the Cloud Native Enterprise]
+* Session 1: link:presentations/Session_1_Introduction.pptx[Introduction]
 * Session 2: link:presentations/Session_2_Architecture_And_Operations.pptx[Pivotal Cloud Foundry Architecture and Operations]
-* Session 3: link:presentations/Session_3_Services_Overview.pptx[Pivotal Cloud Foundry Services]
+* Session 3: link:presentations/Session_3_Cloud_Native_Enterprise.pptx[The Cloud Native Enterprise]
+* Session 4: link:presentations/Session_4_Services_Overview.pptx[Pivotal Cloud Foundry Services]
 
 
 * Developer Workshop
