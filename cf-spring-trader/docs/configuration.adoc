@@ -9,7 +9,7 @@ One of the benefits of Spring Cloud Services is the ability to configure a runni
 
 ==== Configure the Config-Server
 
-. Log into the console at https://console.pcfsony.com
+. Log into the console at https://console.cfpoc2.internal.t-mobile.com
 
 . In your space, under services, select *Manage* under the *config-server*.
 

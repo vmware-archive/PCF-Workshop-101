@@ -4,7 +4,7 @@ In this exercise, we will be deploying all the applications in the project to th
 
 ### Perform the Gradle build
 
-. Change to the PCF-Workshop-Sony/cf-spring-trader directory.
+. Change to the PCF-Workshop-TMO/cf-spring-trader directory.
 
 . Kick off the Gradle build
 
