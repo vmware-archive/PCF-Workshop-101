@@ -12,7 +12,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
   
 . Edit the manifest.yml at the root of the forked spring-music repository. Change the *host* from ${random-word} to your initials. Jenkins does not like the special characters in the host field and will give an error.
   
-. Login to your Jenkins instance at https://jenkins-0.pcfsony.com with the same username and password that you use for CloudFoundry.
+. Login to your Jenkins instance at https://jenkins-0.cfpoc2.internal.t-mobile.com/ with the same username and password that you use for CloudFoundry.
 
 . Navigate to your username folder.
 
@@ -31,7 +31,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Under *Build Environment*, select *Setup CloudFoundry CLI*.
 
-. Under *API Endpoint*, enter `https://api.pcfsony.com`.
+. Under *API Endpoint*, enter `https://api.cfpoc2.internal.t-mobile.com`.
 
 . Check *Skip SSL Validation*.
 
@@ -59,7 +59,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Select *Add Post-build Action* and then *Push to CloudFoundry*.
 
-. Under *Target*, enter `https://api.pcfsony.com`.
+. Under *Target*, enter `https://api.cfpoc2.internal.t-mobile.com`.
 
 . Under *Credentials* select the credentials you configured above.
 
