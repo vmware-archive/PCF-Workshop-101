@@ -4,7 +4,7 @@ One of the benefits of Spring Cloud Services is the ability to configure a runni
 
 ==== Set up the Git Repository
 
-. For the repository https://github.com/jtgammon/trader-config-repo.git
+. Fork the repository https://github.com/bbertka/trader-config-repo.git
 
 
 ==== Configure the Config-Server
