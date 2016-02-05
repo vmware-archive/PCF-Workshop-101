@@ -7,7 +7,7 @@
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.cfpoc2.internal.t-mobile.com--skip-ssl-validation
+$ cf api https://api.cfpoc2.internal.t-mobile.com --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
