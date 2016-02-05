@@ -159,7 +159,8 @@ image::lab6.png[]
 image::blue-green.png[]
 
 == Accessing Container Contents
-
+. Note this lab is deprecated for the Diego runtime, please use 'cf ssh APP_NAME' instead: https://docs.pivotal.io/pivotalcf/customizing/diego-ssh/access-apps.html
++
 . The contents of a deployed application container may be retrieved using the _files_ command within the CLI.  If the path supplied to the command represents a folder, the contents of the folder are retreived:
 +
 ====
