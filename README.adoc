@@ -29,8 +29,9 @@ This one day hands-on classroom style session will provide developers (and opera
 * Session 3: link:presentations/Session_3_Cloud_Native_Enterprise.pptx[The Cloud Native Enterprise]
 * Session 4: link:presentations/Session_4_Services_Overview.pptx[Pivotal Cloud Foundry Services]
 
-
 * Developer Workshop
+** Pre-work
+*** link:labs/labaccess.adoc[Get Environment Access]
 ** Lab 1 - From Zero to Pushing Your First Application
 *** link:labs/lab1/lab.adoc[**Java** Application]
 *** link:labs/lab1/lab-ruby.adoc[**Ruby** Application]
