@@ -1,0 +1,2 @@
+jane.doe@compane.net
+john.doe@company.net
