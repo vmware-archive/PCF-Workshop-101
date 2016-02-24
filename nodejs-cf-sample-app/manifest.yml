@@ -1,7 +1,0 @@
----
-applications:
-- name: nodejs
-  memory: 128M
-  instances: 1
-  host: nodejs-${random-word}
-  path: .

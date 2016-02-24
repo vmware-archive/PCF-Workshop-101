@@ -12,7 +12,7 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
   
 . Edit the manifest.yml at the root of the forked spring-music repository. Change the *host* from ${random-word} to your initials. Jenkins does not like the special characters in the host field and will give an error.
   
-. Login to your Jenkins instance at https://jenkins-0.pcfsony.com with the same username and password that you use for CloudFoundry.
+. Login to your Jenkins instance at https://jenkins-0.cfpoc2.internal.t-mobile.com/ with the same username and password that you use for CloudFoundry.
 
 . Navigate to your username folder.
 
@@ -23,23 +23,11 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Click *New Item*, give it the name *spring-music* and select ``Build a free-style software project.'' Then click +OK+.
 
-===== Configure Git
+== Configure Git
 
 . Under *Source Code Management*, select *Git*, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/spring-music`). Leave credentials as *none*.
 
-===== Configure CF Build Environment
-
-. Under *Build Environment*, select *Setup CloudFoundry CLI*.
-
-. Under *API Endpoint*, enter `https://api.pcfsony.com`.
-
-. Check *Skip SSL Validation*.
-
-. Under *API Credentials* select the credentials you configured above.
-
-. Enter your Organization and Space for CloudFoundry.
-
-===== Configure Gradle Build
+== Configure Gradle Build
 
 . Select *Add Build Step* and then *Invoke Gradle Script*.
 
@@ -55,19 +43,28 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 . Check *Force GRADLE_USER_HOME to use workspace.
 
-===== Configure CF Push
+. On "Build Triggers", select "Build when a change is pushed to GitHub"
 
-. Select *Add Post-build Action* and then *Push to CloudFoundry*.
+== Execute Shell
+----
+DEPLOYED_VERSION_CMD=$(CF_COLOR=false cf apps | grep 'mapUS.' | cut -d" " -f1)
+export BUILD_VERSION="1.2"
+export DEPLOYED_VERSION_CMD
+echo DEPLOYED_VERSION_CMD
+export ROUTE_VERSION="default"
+echo "Deployed Version: $DEPLOYED_VERSION"
+echo "Route Version: $ROUTE_VERSION"
+export API=https://api.cfpoc2.internal.t-mobile.com
 
-. Under *Target*, enter `https://api.pcfsony.com`.
+wget -O cf.tgz https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.13.0&source=github-rel
+sleep 5
+tar -zxvf ./cf.tgz
 
-. Under *Credentials* select the credentials you configured above.
+./cf api --skip-ssl-validation $API
+./cf login -u <user> -p <password> -o <org> -s <space>
 
-. Enter your Organization and Space for CloudFoundry.
+./cf push -f manifest.yml 
 
-. Check *Allow Self-Signed Certificates*.
-
-. Save the config.
 
 == Execute Build Job
 

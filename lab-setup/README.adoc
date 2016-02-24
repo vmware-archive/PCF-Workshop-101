@@ -1,0 +1,5 @@
+= Workshop Setup
+
+* List Admins in admins.txt
+* List Users by email in users.txt
+* From the command line run "python workshop_setup.py ORG_NAME" where ORG_NAME is the value desired for the workshop org.
