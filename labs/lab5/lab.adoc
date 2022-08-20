@@ -2,82 +2,169 @@
 
 [abstract]
 --
-With the release of Pivotal Cloud Foundry 1.6, it is now possible to deploy and manage .NET applications within your PCF environment. 
-
-In the this lab, we will deploy a .NET application backed by a SQL Server instance.  There are two versions of the Contoso application in this repo: V1 has a black background on the home page, and V2 has a green background: this is to show a 'Blue-Green' deployment scenario.
+In this lab we will push a .NET web application to cloud foundry.
 --
 
-== Prerequisites 
+= Lab - From Zero to Pushing Your First Application
 
-. A working PCF 1.6 or 1.5 + Diego Beta deployment. This PCF deployment must have a Windows cell installed and operational -- see https://github.com/cloudfoundry-incubator/diego-windows-release/blob/master/docs/INSTALL.md[the Diego Windows release notes] for additional details on setup of a Windows cell if your PCF environment needs one.
+== Target
 
-. A SQL Server 2012 or 2014 instance with a database created.  This SQL Server database must be accessible (routeable) from your PCF environment. For demonstration purposes, we created a VM running SQL Server 2012 Express on vSphere with 2 vCPUs, 8GB RAM, and 50GB disk using Windows 2012R2.  If you are creating a new SQL Server instance on your own IaaS / hardware, follow http://www.sqlservercentral.com/blogs/basits-sql-server-tips/2012/06/23/sql-server-2012-installation-guide/[this guide] to install from http://www.microsoft.com/en-us/download/details.aspx?id=29062[Microsoft's download website].  As an alternative option, you can create and utilize a SQL Server instance in the cloud using https://azure.microsoft.com/en-us/services/sql-database/[Microsoft Azure]. As of October 2015, Microsoft is offering a free one month trial of Azure.
+. If you haven't already, download the latest release of the Cloud Foundry command line interface  (CLI) from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
 
-. Submodules initiated and fetched for this workshop git repository. After cloning this repository, issue this command to download the .NET code used by this lab.
+. Download and clone the git repo in Visual Studio, if you have the command line tool installed, or you can click 'Download ZIP' on the right side of the page https://github.com/Pivotal-Field-Engineering/pcf-dotnet-environment-viewer[here]
++
+----
+$ git clone https://github.com/Pivotal-Field-Engineering/pcf-dotnet-environment-viewer
+----
 
- $ cd PCF-Workshop-101/
- $ git submodule init && git submodule update
+. Set the API target for the CLI: (set appropriate end point for your environment)
++
+----
+$ cf api https://api.run.poc-cf.loutms.tree --skip-ssl-validation
+----
 
-== Create the User Provided Service
+. Login to Pivotal Cloudfoundry:
++
+----
+$ cf login
+----
++
+Follow the prompts.  You should have a welcome card with your username and password on it.  If you didn't get one, please ask.
 
-The Contoso .NET application depends on a SQL Server instance and optionally a queue.  For this demo, we will create two services however only use the SQL Server service instance. This will be made available to the .NET application via a User Provided Service binding in Cloud Foundry.
+== Push It!
 
-. The first service is a connection to an SQL server:
+. Change to the _ViewEnvironmentt_ application directory (this is the folder containing the code files and manifest.yml):
++
+----
+$ cd $ProjectHome/ViewEnvironment
+----
 
- $ cf cups contoso-demo-sql -p 'connectionString'
+. Push the application!
++
+----
+$ cf push
+----
++
+You should see output similar to the following listing. Take a look at the listing callouts for a play-by-play of what's happening:
++
+====
+----
+$ cf push
+Using manifest file manifest.yml
 
-. Enter your SQL Server connection string (the SQL Server database can be hosted anywhere, e.g. on Azure). Replace the following parameters with the appropriate values: YOUR_IP, YOUR_USERID, YOUR_PASSWORD, YOUR_DATABASE
+Using stack windows2012R2...
+OK
+Updating app env in org fortener / space development as admin...
+OK
 
- Data Source=YOUR_IP;Integrated Security=False;User ID=YOUR_USERID;Password=YOUR_PASSWORD;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=YOUR_DATABASE
+Creating route env-interloan-impalement.run.vca.410er.com...
+OK
 
-. The second service is to an Azure Service Bus queue:
+Binding env-interloan-impalement.run.vca.410er.com to env...
+OK
 
- $ cf cups contoso-demo-queue -p 'queueConnectionString'
+Uploading env...
+Uploading app files from: /ViewEnvironment
+Uploading 241.6K, 39 files
+Done uploading
+OK
 
-. The command line will then prompt you for the queue connection string with the prompt `queueConnectionString:`, and you can enter the information as follows. Replace the following parameters with the appropriate values: YOUR_QUEUE_HOST, YOUR_QUEUE_NAME, YOUR_QUEUE_KEY. For the demo, you can use placeholder values as we will not utilize this.
+Stopping app env in org fortener / space development as admin...
+OK
 
- Endpoint=sb://YOUR_QUEUE_HOST;SharedAccessKeyName=YOUR_QUEUE_NAME;SharedAccessKey=YOUR_QUEUE_KEY
+Starting app env in org fortener / space development as admin...
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (334K)
+Downloading buildpacks (binary_buildpack)...
+Downloading binary_buildpack...
+Downloaded binary_buildpack
+Downloaded buildpacks
+Staging...
+Exit status 0
+Staging complete
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded droplet (322.6K)
+Uploading complete
 
-== Deploy the .NET Application
+0 of 1 instances running, 1 starting
+1 of 1 instances running
 
-Use the following commands to deploy to Pivotal Cloud Foundry after you have created the User Provided Servies in the previous step.
+App started
 
-. Go to the directory containing the .NET app
 
- $ cd cf-dotnetcontoso
+OK
 
-. Edit the file contoso-university-v1/demo.bat and replace YOUR_DOMAIN with the domain in use by application in your instance of Cloud Foundry.
+App env was started using this command `..\tmp\lifecycle\WebAppServer.exe`
 
-. Deploy
+Showing health and status for app env in org fortener / space development as admin...
+OK
 
-.. On Linux:
+requested state: started
+instances: 1/1
+usage: 512M x 1 instances
+urls: env-unwrestled-grot.run.vca.410er.com, env-nonaddicting-acicularity.run.vca.410er.com, env-interloan-impalement.run.vca.410er.com
+last uploaded: Sat Oct 31 01:17:15 UTC 2015
+stack: windows2012R2
 
- $ cd contoso-university-v1
- $ bash demo1.bat
+     state     since                    cpu    memory           disk          details
+#0   running   2015-10-30 09:18:03 PM   0.0%   102.6M of 512M   14.8M of 1G
 
- $ cd ../contoso-university-v2
- $ bash demo2.bat
+$
+----
+<1> The CLI is using a manifest to provide necessary configuration details such as application name, memory to be allocated, the stack to be used (in this case Windows2012R2), the number of instances requested to start, and path to the application artifact.
+Take a look at `manifest.yml` to see how.
+<2> In most cases, the CLI indicates each Cloud Foundry API call as it happens.
+In this case, the CLI has created an application record for _env_ in your assigned space.
+<3> All HTTP/HTTPS requests to applications will flow through Cloud Foundry's front-end router called http://docs.cloudfoundry.org/concepts/architecture/router.html[(Go)Router].
+Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `app.poc-cf.loutms.tree` domain.
+<4> Now the CLI is _binding_ the created route to the application.
+Routes can actually be bound to multiple applications to support techniques such as http://www.mattstine.com/2013/07/10/blue-green-deployments-on-cloudfoundry[blue-green deployments].
+<5> The CLI finally uploads the application bits to Pivotal Cloud Foundry. Notice that it's uploading _39 files_! This is because Cloud Foundry actually uploads all the files for the deployment for caching purposes.
+<6> Now we begin the staging process. By choosing the Windows2012R2 stack a container is created on the runtime to prepare the application to run, a second container is then generated that will host your application...in this case using the WebAppServer process in Windows.  If you would continue on to the other language labs you can push an application on the Linux stack, this step gets replaced with the steps appropriate for the application being run.
+<7> The complete package of your application and all of its necessary runtime components is called a _droplet_.
+Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Cells]_ for execution.
+<8> The CLI tells you exactly what command and argument set was used to start your application.
+<9> Finally the CLI reports the current status of your application's health.
+====
 
-.. On Windows:
+. Visit the application in your browser by hitting the route that was generated by the CLI:
++
+image::lab-net.png[]
 
- $ cd contoso-university-v1
- $ demo1.bat 
+== Interact with App from CF CLI
 
- $ cd ../contoso-university-v2
- $ demo2.bat
+. Get information about the currently deployed application using CLI apps command:
++
+----
+$ cf apps
+----
++
+Note the application name for next steps
 
-== View the Two Versions of the Application
+. Scale the app to 2 instances
++
+----
+$ cf scale env -i 2
+----
 
-. Pull up the Application Manager dashboard.
+. Get information about running instances, memory, CPU, and other statistics using CLI instances command
++
+----
+$ cf app env
+----
 
-. Click on the contoso-demo-v1 URL. This is the Blue deploy and has a black background on the homepage. Note that it has also been mapped to a second route named 'contoso.YOUR_DOMAIN'  Feel free to add some Students, Instructors, etc.
+. Stop the deployed application using the CLI
++
+----
+$ cf stop env
+----
 
-. Click on the contoso-demo-v2 URL. This is the Green deploy and has a green background on the homepage. It utilizes the same SQL Server database (via the User Provided Service binding) so note that all of the values you entered in the previous step show up here too - very cool!
-
-== Blue-Green Deploy
-
-Cloud Foundry makes it very simple to perform Blue-Green deployments. Simply map the same route to a different version of your applicaiton which has been deployed. Cloud Foundry will automatically load balance between the two different applications, enabling zero-downtime and allowing for a seamless transition between application versions.  Replace YOUR_DOMAIN with the appropriate value below to map the second version of Contoso (the green background) to the same route as the first version of Contoso (the black background). Voila!
-
- $ cf map-route contoso-demo-v2 YOUR_DOMAIN -n contoso
-
-Make sure you open the Contoso application in a Chrome incognito window so that sticky sessions do not cause any issues. Then, refresh and note the color changing. Also browse the various tabs and see that V2 of the application is using the same SQL Server database that V1 utilized. 
+. Delete the deployed application using the CLI
++
+----
+$ cf delete env
+----

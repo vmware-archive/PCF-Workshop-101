@@ -7,7 +7,7 @@
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.devcloudwest.inbcu.com --skip-ssl-validation
+$ cf api https://api.run.poc-cf.loutms.tree --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
@@ -196,7 +196,7 @@ Take a look at `manifest.yml` to see how.
 <2> In most cases, the CLI indicates each Cloud Foundry API call as it happens.
 In this case, the CLI has created an application record for _Workshop_ in your assigned space.
 <3> All HTTP/HTTPS requests to applications will flow through Cloud Foundry's front-end router called http://docs.cloudfoundry.org/concepts/architecture/router.html[(Go)Router].
-Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `devcloudwest.inbcu.com` domain.
+Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `app.poc-cf.loutms.tree` domain.
 <4> Now the CLI is _binding_ the created route to the application.
 Routes can actually be bound to multiple applications to support techniques such as http://www.mattstine.com/2013/07/10/blue-green-deployments-on-cloudfoundry[blue-green deployments].
 <5> The CLI finally uploads the application bits to Pivotal Cloud Foundry. Notice that it's uploading _39 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes.
@@ -206,7 +206,7 @@ Routes can actually be bound to multiple applications to support techniques such
 <9> Here we see the version of the 'njade@1.11.0 node_modules/jade' that has been chosen and installed.
 <10> Here we see the version of the 'bower@1.5.3 node_modules/bower' that has been chosen and installed.
 <11> The complete package of your application and all of its necessary runtime components is called a _droplet_.
-Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Droplet Execution Agents (DEA's)]_ for execution.
+Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Cells]_ for execution.
 <12> The CLI tells you exactly what command and argument set was used to start your application.
 <13> Finally the CLI reports the current status of your application's health.
 ====
